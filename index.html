@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="ext-resource-dependency" content="assets/logos/wevolabs.png">
+<meta name="ext-resource-dependency" content="assets/logos/canva.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js" onerror="window.__dcFail=1"></script>
+<script>(function(){function f(){var b=document.body;if(!b)return;if(window.__dcFail||/\{\{\s*[\w.$]+\s*\}\}/.test(b.innerText||'')){b.innerHTML='<div style="max-width:560px;margin:15vh auto;padding:28px;font-family:system-ui,sans-serif;background:#FFFFFF;border:1px solid #DCE6F5;border-radius:20px;color:#001F19;line-height:1.55;"><h1 style="font-size:24px;margin:0 0 8px;">La cápsula no pudo cargar</h1><p style="margin:0 0 6px;font-size:16px;">Recarga la página. Si sigue igual, ábrela en Chrome o Edge actualizados y revisa tu conexión.</p><p style="margin:0;font-size:15px;color:#34405A;">Si estás en clase, avísale a tu docente.</p></div>';b.style.background='#F6F9FD';}}window.addEventListener('load',function(){setTimeout(f,5000);});})();</script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="ds/crack-the-code-design-system-7d289831-1c23-4574-a592-107238cbba6e/tokens/colors.css">
+  <link rel="stylesheet" href="ds/crack-the-code-design-system-7d289831-1c23-4574-a592-107238cbba6e/tokens/typography.css">
+  <link rel="stylesheet" href="ds/crack-the-code-design-system-7d289831-1c23-4574-a592-107238cbba6e/tokens/spacing.css">
+  <link rel="stylesheet" href="ds/crack-the-code-design-system-7d289831-1c23-4574-a592-107238cbba6e/tokens/effects.css">
+  <link rel="stylesheet" href="ds/crack-the-code-design-system-7d289831-1c23-4574-a592-107238cbba6e/tokens/base.css">
+  <link rel="stylesheet" href="ds/crack-the-code-design-system-7d289831-1c23-4574-a592-107238cbba6e/styles.css">
+  <script src="ds/crack-the-code-design-system-7d289831-1c23-4574-a592-107238cbba6e/_ds_bundle.js"></script>
+  <script src="./image-slot.js"></script>
+  <style>
+    @keyframes aura{0%,100%{box-shadow:0 0 0 0 rgba(86,145,255,0)}50%{box-shadow:0 0 0 7px rgba(86,145,255,.24)}}
+    [data-tap]{animation:aura 2.4s ease-in-out infinite;}
+    button{transition:transform .12s ease-out,background-color .15s ease-out,box-shadow .15s ease-out;}
+    button:active{transform:scale(.97);}
+    @media (prefers-reduced-motion:reduce){[data-tap]{animation:none;}}
+    body{margin:0;background:#F2F6FC;text-wrap:pretty;-webkit-font-smoothing:antialiased;font-family:"NT Bau",system-ui,sans-serif;color:#001F19;}
+    a{color:#1F4FB0;}a:hover{color:#001F19;}
+    button{font-family:inherit;}
+    @keyframes onair{0%,100%{opacity:1}50%{opacity:.35}}
+    @keyframes ctcpulse{0%{box-shadow:0 0 0 0 rgba(107,227,215,.75)}70%{box-shadow:0 0 0 10px rgba(107,227,215,0)}100%{box-shadow:0 0 0 0 rgba(107,227,215,0)}}
+    button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #2F6FE0;outline-offset:2px;}
+    input[type=range]{accent-color:#2F6FE0;}
+    @media (prefers-reduced-motion:reduce){*{animation:none !important;}}
+  @keyframes proIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}@keyframes popIn{from{opacity:0;transform:scale(.92) translateY(10px)}to{opacity:1;transform:none}}@keyframes scrim{from{opacity:0}to{opacity:1}}@keyframes slideIn{from{opacity:0;transform:translateX(28px)}to{opacity:1;transform:none}}@keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}@keyframes eq{0%,100%{transform:scaleY(.25)}50%{transform:scaleY(1)}}@keyframes stamp{0%{opacity:0;transform:scale(1.7) rotate(-14deg)}100%{opacity:1;transform:scale(1) rotate(-8deg)}}@keyframes routeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}@keyframes routePulse{0%{box-shadow:0 0 0 0 rgba(86,145,255,.7)}70%{box-shadow:0 0 0 12px rgba(86,145,255,0)}100%{box-shadow:0 0 0 0 rgba(86,145,255,0)}}@keyframes routeFill{from{transform:scaleX(0)}to{transform:scaleX(1)}}@keyframes proIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}@keyframes slideIn{from{opacity:0;transform:translateX(28px)}to{opacity:1;transform:none}}@keyframes eq{0%,100%{transform:scaleY(.25)}50%{transform:scaleY(1)}}</style>
+</helmet>
+
+<div style="max-width:1100px;margin:0 auto;padding:clamp(8px,2vw,16px);box-sizing:border-box;display:flex;flex-direction:column;gap:14px;">
+
+  <a href="#contenido" style="position:absolute;left:-9999px;top:8px;z-index:70;background:#001F19;color:#FFFFFF;padding:10px 14px;border-radius:10px;font-weight:700;text-decoration:none;" style-focus="left:16px;">Saltar al contenido</a>
+  <div data-menu="1" style="background:#2F6FE0;color:#FFFFFF;border:1px solid #1F4FB0;border-radius:22px;padding:8px 14px 6px;display:flex;flex-direction:column;gap:4px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;">
+      <span style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;"><span style="width:8px;height:8px;border-radius:50%;background:#6BE3D7;animation:onair 1.6s ease-in-out infinite;"></span>Menú · Episodio 4</span>
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+        <span style="font-size:14px;font-weight:700;color:#FFFFFF;">{{ status }}</span>
+        <div role="group" aria-label="Zoom" style="display:flex;align-items:center;border:1px solid #DCE6F5;border-radius:999px;overflow:hidden;background:#FFFFFF;">
+          <button type="button" onClick="{{ zoomOut }}" aria-label="Hacer más pequeño" style="border:0;background:#FFFFFF;color:#001F19;font-weight:700;font-size:17px;width:34px;height:32px;cursor:pointer;">−</button>
+          <button type="button" onClick="{{ zoomReset }}" aria-label="Tamaño normal" style="border:0;border-left:1px solid #DCE6F5;border-right:1px solid #DCE6F5;background:#FFFFFF;color:#001F19;font-weight:700;font-size:13px;min-width:58px;height:32px;cursor:pointer;">🔍 {{ zoomTxt }}</button>
+          <button type="button" onClick="{{ zoomIn }}" aria-label="Hacer más grande" style="border:0;background:#FFFFFF;color:#001F19;font-weight:700;font-size:17px;width:34px;height:32px;cursor:pointer;">+</button>
+        </div>
+        <button type="button" onClick="{{ toggleMute }}" aria-pressed="{{ mute }}" style="border:1px solid #DCE6F5;background:#FFFFFF;color:#001F19;font-weight:700;font-size:13px;height:32px;padding:0 12px;border-radius:999px;cursor:pointer;">{{ muteLabel }}</button>
+        <button type="button" onClick="{{ toggleFull }}" aria-pressed="{{ full }}" aria-label="{{ fullAria }}" style="border:1px solid #DCE6F5;background:#FFFFFF;color:#001F19;font-weight:700;font-size:13px;height:32px;padding:0 12px;border-radius:999px;cursor:pointer;white-space:nowrap;">{{ fullLabel }}</button>
+      </div>
+    </div>
+    <div style="overflow-x:auto;padding:2px;">
+      <div style="position:relative;display:flex;justify-content:space-between;min-width:600px;">
+        <div style="position:absolute;left:42px;right:42px;top:16px;height:5px;border-radius:6px;background:#5691FF;"></div>
+        <div style="position:absolute;left:42px;top:16px;height:5px;border-radius:6px;background:#6BE3D7;width:{{ line }};transition:width .25s ease-out;"></div>
+        <sc-for list="{{ idx }}" as="it" hint-placeholder-count="6">
+          <button type="button" onClick="{{ it.go }}" style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:3px;border:0;background:transparent;cursor:pointer;padding:0;width:84px;color:#FFFFFF;">
+            <sc-if value="{{ it.on }}"><span style="width:38px;height:38px;border-radius:50%;background:#001F19;color:#FFFFFF;border:3px solid #FFFFFF;box-shadow:0 0 0 2px #001F19;box-sizing:border-box;display:flex;align-items:center;justify-content:center;font-size:16px;">{{ it.e }}</span></sc-if>
+            <sc-if value="{{ it.done }}"><span style="width:38px;height:38px;border-radius:50%;background:#6BE3D7;color:#001F19;border:3px solid #FFFFFF;box-sizing:border-box;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;">✓</span></sc-if>
+            <sc-if value="{{ it.todo }}"><span style="width:38px;height:38px;border-radius:50%;background:#FFFFFF;border:3px solid #DCE6F5;box-sizing:border-box;display:flex;align-items:center;justify-content:center;font-size:16px;">{{ it.e }}</span></sc-if>
+            <b style="font-size:13px;white-space:nowrap;">{{ it.t }}</b>
+          </button>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <div id="contenido" tabindex="-1" style="height:0;margin-top:-14px;outline:none;"></div>
+  <sc-if value="{{ s0 }}" hint-placeholder-val="{{ true }}">
+    <section data-screen-label="01 Inicio" style="border-radius:24px;overflow:hidden;background:#001F19;color:#FFFFFF;display:flex;flex-direction:column;">
+      <div style="background:radial-gradient(60% 90% at 100% 0%,rgba(47,111,224,.55),transparent 60%),radial-gradient(60% 90% at 0% 100%,rgba(107,227,215,.30),transparent 62%),#001F19;padding:clamp(24px,4.6vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:28px;align-items:center;">
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <span style="display:inline-flex;align-items:center;gap:8px;background:#6BE3D7;color:#001F19;font-weight:700;font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:7px 12px;border-radius:8px;"><span style="width:8px;height:8px;border-radius:50%;background:#001F19;animation:onair 1.6s ease-in-out infinite;"></span>Grabando</span>
+          </div>
+          <span style="font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#6BE3D7;">Fuera del Feed · Temporada 1 · Episodio 4</span>
+          <h1 style="font-family:'Roca One Light',serif;font-weight:300;font-size:clamp(36px,6vw,58px);line-height:1.02;margin:0;">Estudio de grabación</h1>
+          <p style="margin:0;font-size:18px;line-height:1.55;">Tu guion ya existe. Hoy le buscas voz, música y un lugar donde sonar, y armas tu primera mezcla.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;font-size:15px;font-weight:700;">
+            <span style="background:rgba(255,255,255,.12);border-radius:999px;padding:7px 12px;">Tu voz</span>
+            <span style="background:rgba(255,255,255,.12);border-radius:999px;padding:7px 12px;">Tu música</span>
+            <span style="background:rgba(255,255,255,.12);border-radius:999px;padding:7px 12px;">Tu primer ensamble</span>
+          </div>
+        </div>
+        <div style="position:relative;width:100%;aspect-ratio:4/3;overflow:hidden;-webkit-mask-image:radial-gradient(ellipse 72% 70% at 55% 50%,#000 55%,transparent 100%);mask-image:radial-gradient(ellipse 72% 70% at 55% 50%,#000 55%,transparent 100%);">
+          <image-slot alt="El estudio de Fuera del Feed" id="e4-portada" src="assets/e4/01-portada.jpg" shape="rect" placeholder="Imagen 1 · El estudio de Fuera del Feed" style="filter:saturate(.86) contrast(1.05);"></image-slot><span aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background-image:url(assets/grano.png);background-size:180px;opacity:.14;mix-blend-mode:overlay;"></span>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;padding:14px 20px;border-top:1px solid rgba(255,255,255,.12);flex-wrap:wrap;">
+        <span style="width:40px;height:40px;border-radius:50%;background:#6BE3D7;color:#001F19;display:flex;align-items:center;justify-content:center;font-weight:700;">FF</span>
+        <div style="flex:1;min-width:180px;display:flex;flex-direction:column;"><b style="font-size:15px;">@fueradelfeed</b><span style="font-size:14px;color:#B6E2FF;">Herramientas nuevas: Canva y WevoLabs · Bibliotecas: Mixkit o Pixabay</span></div>
+        <button data-tap="1" type="button" onClick="{{ next }}" style="border:0;background:#6BE3D7;color:#001F19;font-weight:700;font-size:15px;padding:12px 20px;border-radius:999px;cursor:pointer;">Entrar al estudio →</button>
+      </div>
+    </section>
+  </sc-if>
+
+  <sc-if value="{{ s1 }}">
+    <section data-screen-label="02 Transmisión" style="border-radius:24px;overflow:hidden;background:#FFFFFF;border:1px solid #DCE6F5;display:flex;flex-direction:column;">
+      <div style="display:flex;align-items:center;gap:10px;padding:14px 20px;border-bottom:1px solid #EAF0F8;flex-wrap:wrap;">
+        <span style="width:42px;height:42px;border-radius:50%;padding:2px;background:linear-gradient(135deg,#6BE3D7,#2F6FE0);box-sizing:border-box;display:flex;"><span style="flex:1;border-radius:50%;background:#001F19;border:2px solid #FFFFFF;display:flex;align-items:center;justify-content:center;font-size:16px;">🎙️</span></span>
+        <div style="flex:1;display:flex;flex-direction:column;"><b style="font-size:15px;">La Editora</b><span style="font-size:14px;color:#4F5F7A;">Transmisión 04 · su voz está creada con IA</span></div>
+      </div>
+      <div role="group" aria-label="Pasos de la transmisión" style="display:flex;gap:8px;flex-wrap:wrap;padding:12px 20px;border-bottom:1px solid #EAF0F8;">
+        <sc-for list="{{ tSteps }}" as="t" hint-placeholder-count="2">
+          <sc-if value="{{ t.on }}"><button type="button" aria-current="step" onClick="{{ t.pick }}" style="flex:none;white-space:nowrap;display:flex;gap:8px;align-items:center;border:0;background:#2F6FE0;color:#FFFFFF;font-weight:700;font-size:14px;padding:6px 14px 6px 6px;border-radius:999px;cursor:pointer;"><b style="width:24px;height:24px;border-radius:50%;background:#FFFFFF;color:#1F4FB0;display:inline-flex;align-items:center;justify-content:center;font-size:13px;">{{ t.n }}</b>{{ t.t }}</button></sc-if>
+          <sc-if value="{{ t.off }}"><button type="button" onClick="{{ t.pick }}" style="flex:none;white-space:nowrap;text-align:left;display:flex;gap:8px;align-items:center;border:1px solid #DCE6F5;background:#FFFFFF;color:#001F19;font-weight:700;font-size:14px;padding:5px 14px 5px 5px;border-radius:999px;cursor:pointer;"><b style="width:24px;height:24px;border-radius:50%;background:#EAF2FF;color:#1F4FB0;display:inline-flex;align-items:center;justify-content:center;font-size:13px;">{{ t.mark }}</b>{{ t.t }}</button></sc-if>
+        </sc-for>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));">
+        <div style="background:radial-gradient(70% 100% at 100% 0%,rgba(47,111,224,.5),transparent 60%),#001F19;color:#FFFFFF;padding:clamp(22px,4vw,36px);display:flex;flex-direction:column;gap:16px;">
+          <div style="position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;-webkit-mask-image:linear-gradient(180deg,#000 65%,transparent 100%);mask-image:linear-gradient(180deg,#000 65%,transparent 100%);">
+            <image-slot alt="Micrófono encendido en la Redacción" id="e4-transmision" src="assets/e4/02-transmision.jpg" shape="rect" placeholder="Imagen 2 · Micrófono encendido en la Redacción" style="filter:saturate(.86) contrast(1.05);"></image-slot><span aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background-image:url(assets/grano.png);background-size:180px;opacity:.14;mix-blend-mode:overlay;"></span>
+          </div>
+          <p style="font-family:'Roca One Light',serif;font-size:clamp(22px,3.2vw,30px);line-height:1.22;margin:0;">"Una historia también se escucha. Antes de buscar sonidos, decide qué tiene que sentir quien escucha."</p>
+        </div>
+        <div style="padding:clamp(20px,3.6vw,32px);display:flex;flex-direction:column;gap:14px;">
+          <sc-if value="{{ ts0 }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;flex-direction:column;gap:6px;"><b style="font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#1F4FB0;">Tu misión</b><span style="font-family:'Roca One Light',serif;font-size:clamp(20px,2.4vw,24px);line-height:1.25;">Armar el primer ensamble de tu capítulo 1: voz, música y ambiente.</span></div>
+          <div style="display:flex;justify-content:flex-end;"><button data-tap="1" type="button" onClick="{{ tNext }}" style="border:0;background:#2F6FE0;color:#FFFFFF;font-weight:700;font-size:15px;padding:12px 20px;border-radius:999px;cursor:pointer;">Siguiente: antes de empezar →</button></div>
+          </sc-if>
+          <sc-if value="{{ ts1 }}">
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <span style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;">Antes de empezar</span>
+            <div style="display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.5;"><b style="width:26px;height:26px;flex:none;border-radius:50%;background:#2F6FE0;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;font-size:14px;">1</b><span>Ten a mano tu guion de <b>Mi bitácora › Mi guion</b>.</span></div>
+            <div style="display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.5;"><b style="width:26px;height:26px;flex:none;border-radius:50%;background:#2F6FE0;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;font-size:14px;">2</b><span>Ponte audífonos: hoy todo se escucha.</span></div>
+            <div style="display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.5;"><b style="width:26px;height:26px;flex:none;border-radius:50%;background:#2F6FE0;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;font-size:14px;">3</b><span>Crea una carpeta con el nombre de tu historia para guardar tus audios.</span></div>
+          </div>
+          <p style="margin:0;font-size:14px;line-height:1.5;color:#34405A;">Hoy editas tu podcast en Canva, con tu cuenta personal. La voz la haces con WevoLabs, sin cuenta; si no carga, con el texto a voz de Canva. Tu docente te dice cómo trabaja tu grupo; si estudias solo, sigue la ruta de WevoLabs.</p>
+          <p style="margin:0;border-top:1px solid #EAF0F8;padding-top:14px;font-size:15px;line-height:1.5;"><b>Manifiesto: No copio caras ni voces reales.</b> Hoy eliges voces: ninguna imita a alguien que existe.</p>
+          <div style="display:flex;justify-content:flex-end;"><button data-tap="1" type="button" onClick="{{ next }}" style="border:0;background:#2F6FE0;color:#FFFFFF;font-weight:700;font-size:15px;padding:12px 20px;border-radius:999px;cursor:pointer;">Ver el caso de Valentina →</button></div>
+          </sc-if>
+        </div>
+      </div>
+    </section>
+  </sc-if>
+
+  <sc-if value="{{ s2 }}">
+    <section data-screen-label="03 Bitácora de Valentina" style="display:flex;flex-wrap:wrap;gap:14px;align-items:flex-start;">
+      <div style="flex:1.6 1 520px;min-width:0;border-radius:24px;overflow:hidden;background:#FFFFFF;border:1px solid #DCE6F5;display:flex;flex-direction:column;">
+        <div style="display:flex;align-items:center;gap:10px;padding:14px 20px;border-bottom:1px solid #EAF0F8;">
+          <span style="width:42px;height:42px;border-radius:50%;padding:2px;background:linear-gradient(135deg,#6BE3D7,#2F6FE0);box-sizing:border-box;display:flex;"><span style="flex:1;border-radius:50%;background:#CFE3FF;border:2px solid #FFFFFF;display:flex;align-items:center;justify-content:center;font-weight:700;">V</span></span>
+          <div style="display:flex;flex-direction:column;"><b style="font-size:15px;">Valentina · 15 años</b><span style="font-size:14px;color:#4F5F7A;">Bitácora · Episodio 4 · Voces del andén</span></div>
+        </div>
+        <div style="padding:clamp(20px,3.6vw,32px);display:flex;flex-direction:column;gap:16px;">
+          <h2 style="font-family:'Roca One Light',serif;font-weight:300;font-size:clamp(26px,4vw,36px);line-height:1.1;margin:0;">Tres intentos y ninguna canción</h2>
+          <div style="display:flex;flex-direction:column;border-left:4px solid #DCE6F5;margin-left:10px;padding-left:22px;">
+            <div style="position:relative;padding:4px 0 16px;"><span style="position:absolute;left:-34px;top:6px;width:20px;height:20px;border-radius:50%;background:#C93B31;border:3px solid #FFFFFF;"></span><b style="font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:#A42F27;">Su error</b><div style="font-size:16px;line-height:1.55;">Tenía 3 intentos para crear música y pidió: "algo bonito para un podcast".</div><sc-if value="{{ vAsk }}" hint-placeholder-val="{{ true }}"><div style="margin-top:10px;"><div style="display:flex;flex-direction:column;gap:8px;"><b style="font-size:15px;">¿Ese pedido sirve para encontrar su música?</b><div style="display:flex;flex-wrap:wrap;gap:8px;"><sc-for list="{{ vOpts }}" as="o" hint-placeholder-count="3"><button data-tap="1" type="button" onClick="{{ o.pick }}" style="flex:0 0 auto;max-width:100%;white-space:nowrap;border:1px solid #D3DEEF;background:#FFFFFF;color:#001F19;font-weight:700;font-size:15px;padding:9px 14px;border-radius:999px;cursor:pointer;text-align:left;">{{ o.t }}</button></sc-for></div></div></div></sc-if><sc-if value="{{ vShown }}"><div style="margin-top:10px;background:#FDECEA;border-radius:12px;padding:10px 14px;font-size:15px;line-height:1.5;"><b>Gastó los 3 intentos y, cuando supo qué necesitaba, ya no le quedaban.</b> {{ vFb }}</div><button type="button" onClick="{{ goMusica }}" style="margin-top:8px;margin-top:8px;border:0;background:#FDECEA;color:#001F19;font-weight:700;font-size:14px;padding:7px 12px;border-radius:999px;cursor:pointer;">Para que no te pase: Música con intención →</button></sc-if></div>
+            <sc-if value="{{ vShown }}"><div style="position:relative;padding:4px 0 16px;"><span style="position:absolute;left:-34px;top:6px;width:20px;height:20px;border-radius:50%;background:#6BE3D7;border:3px solid #FFFFFF;"></span><b style="font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:#0E7A6B;">Su paso</b><div style="font-size:16px;line-height:1.55;">Escribió primero la intención: cálida, con guitarra, lenta y de fondo para la voz. Con eso encontró su pista en una biblioteca gratuita.</div></div></sc-if>
+            <sc-if value="{{ vShown }}"><div style="position:relative;padding:4px 0 0;"><span style="position:absolute;left:-34px;top:6px;width:20px;height:20px;border-radius:50%;background:#2F6FE0;border:3px solid #FFFFFF;"></span><b style="font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:#1F4FB0;">Lo que aprendió</b><div style="font-size:16px;line-height:1.55;">Primero la intención, después el sonido.</div></div></sc-if>
+          </div>
+          <div style="background:radial-gradient(70% 120% at 100% 0%,rgba(47,111,224,.45),transparent 60%),#001F19;color:#FFFFFF;border-radius:16px;padding:16px 18px;display:flex;flex-direction:column;gap:8px;">
+            <span style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6BE3D7;">Antes de seguir, piénsalo</span>
+            <span style="font-size:16px;line-height:1.55;">Cierra los ojos y piensa en tu historia. ¿Qué tiene que sentir quien la escucha en el primer minuto?</span>
+          </div>
+          <div style="display:flex;justify-content:flex-end;"><button data-tap="1" type="button" onClick="{{ next }}" style="border:0;background:#2F6FE0;color:#FFFFFF;font-weight:700;font-size:15px;padding:12px 20px;border-radius:999px;cursor:pointer;">Ir a las escenas →</button></div>
+        </div>
+      </div>
+      <aside style="flex:1 1 280px;min-width:0;display:flex;flex-direction:column;gap:14px;">
+        <div style="position:relative;width:100%;aspect-ratio:1/1;border-radius:22px;overflow:hidden;background:#EAF2FF;">
+          <image-slot alt="Valentina con audífonos frente a su línea de tiempo" id="e4-valentina" src="assets/e4/03-valentina.jpg" shape="rect" placeholder="Imagen 3 · Valentina con audífonos frente a su línea de tiempo" style="filter:saturate(.86) contrast(1.05);"></image-slot><span aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background-image:url(assets/grano.png);background-size:180px;opacity:.14;mix-blend-mode:overlay;"></span>
+        </div>
+      </aside>
+    </section>
+  </sc-if>
+
+  <sc-if value="{{ s3 }}">
+    <section data-screen-label="04 Escenas" style="border-radius:24px;background:#FFFFFF;border:1px solid #DCE6F5;overflow:hidden;display:flex;flex-direction:column;">
+      <div style="display:flex;gap:6px;flex-wrap:wrap;padding:8px 14px;background:#C9DCFA;border-bottom:1px solid #B6D2FA;align-items:center;">
+        <span style="flex:none;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-right:4px;">Escenas</span>
+        <sc-for list="{{ scPills }}" as="p" hint-placeholder-count="5">
+          <sc-if value="{{ p.on }}"><button type="button" onClick="{{ p.go }}" aria-current="step" style="flex:none;border:0;font-size:13px;font-weight:700;padding:5px 10px;border-radius:999px;background:#2F6FE0;color:#FFFFFF;cursor:pointer;white-space:nowrap;">{{ p.e }} {{ p.short }}<sc-if value="{{ p.req }}"> · ● Obligatoria</sc-if><sc-if value="{{ p.rec }}"> · si te sobra tiempo</sc-if></button></sc-if>
+          <sc-if value="{{ p.done }}"><button type="button" onClick="{{ p.go }}" style="flex:none;border:0;font-size:13px;font-weight:700;padding:5px 10px;border-radius:999px;background:#DDF7F3;color:#001F19;cursor:pointer;white-space:nowrap;">✓ {{ p.short }}<sc-if value="{{ p.req }}"> · ● Obligatoria</sc-if></button></sc-if>
+          <sc-if value="{{ p.todo }}"><button type="button" onClick="{{ p.go }}" style="flex:none;font-size:13px;font-weight:700;padding:5px 10px;border-radius:999px;background:#FFFFFF;border:1px solid #DCE6F5;color:#001F19;cursor:pointer;white-space:nowrap;">{{ p.e }} {{ p.short }}<sc-if value="{{ p.req }}"> · ● Obligatoria</sc-if><sc-if value="{{ p.rec }}"> · si te sobra tiempo</sc-if></button></sc-if>
+        </sc-for>
+      </div>
+
+      <div data-anim="scene" style="padding:clamp(20px,3.6vw,36px);display:flex;flex-direction:column;gap:18px;">
+        <div style="display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;background:#E1EEFF;border-radius:14px;padding:10px 14px;">
+          <b style="font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#1F4FB0;">Elige 4 actividades</b>
+          <span style="flex:1;min-width:220px;font-size:13px;line-height:1.5;color:#34405A;">Haz las marcadas <b style="color:#1F4FB0;">● Obligatoria</b>; las demás, si te sobra tiempo. Tu docente te guía; si estudias solo, sigue el mismo orden.</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));border-radius:20px;overflow:hidden;background:radial-gradient(70% 120% at 100% 0%,rgba(47,111,224,.55),transparent 60%),radial-gradient(60% 100% at 0% 100%,rgba(107,227,215,.25),transparent 62%),#001F19;color:#FFFFFF;">
+          <div style="padding:clamp(16px,2.8vw,26px);display:flex;flex-direction:column;gap:8px;justify-content:center;">
+            <div style="display:flex;gap:8px;flex-wrap:wrap;">
+              <span style="background:#6BE3D7;color:#001F19;font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding:6px 10px;border-radius:8px;"><sc-if value="{{ scNotPausa }}">{{ scE }} Escena {{ scN }} de {{ scTot }}</sc-if><sc-if value="{{ scIsPausa }}">☕ Pausa</sc-if></span>
+              <sc-if value="{{ scReq }}"><span style="background:#FFFFFF;color:#001F19;font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding:6px 10px;border-radius:8px;">● Obligatoria</span></sc-if>
+              <sc-if value="{{ scRec }}"><span style="white-space:nowrap;flex:none;border:1px solid rgba(255,255,255,.5);color:#FFFFFF;font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border-radius:8px;">Si te sobra tiempo</span></sc-if>
+            </div>
+            <h2 style="font-family:'Roca One Light',serif;font-weight:300;font-size:clamp(30px,4.6vw,44px);line-height:1.04;margin:0;">{{ scT }}</h2>
+            <span style="font-size:17px;line-height:1.45;color:#E3F0FF;">{{ scHook }}</span>
+            <span style="font-size:15px;color:#6BE3D7;">Necesitas: {{ scTool }}</span>
+            <sc-if value="{{ hasLinks }}"><div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px;"><sc-for list="{{ links }}" as="l" hint-placeholder-count="2"><a href="{{ l.href }}" target="_blank" rel="noopener noreferrer" style="text-decoration:none;display:inline-flex;white-space:nowrap;flex:none;align-items:center;gap:4px;font-weight:700;font-size:14px;padding:7px 11px;border-radius:999px;background:#6BE3D7;color:#001F19;animation:ctcpulse 2.2s ease-out infinite;">{{ l.t }} ↗</a></sc-for></div></sc-if>
+          </div>
+          <div style="position:relative;min-height:170px;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 30%);mask-image:linear-gradient(90deg,transparent 0%,#000 30%);">
+            <div style="position:absolute;inset:0;">
+              <sc-if value="{{ isCast }}"><image-slot alt="Casting de voces" id="e4-sc-casting" src="assets/e4/04-casting.jpg" shape="rect" placeholder="Imagen 4 · Casting de voces" style="filter:saturate(.86) contrast(1.05);"></image-slot><span aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background-image:url(assets/grano.png);background-size:180px;opacity:.14;mix-blend-mode:overlay;"></span></sc-if>
+              <sc-if value="{{ isMus }}"><image-slot alt="Música con intención" id="e4-sc-musica" src="assets/e4/05-musica.jpg" shape="rect" placeholder="Imagen 5 · Música con intención" style="filter:saturate(.86) contrast(1.05);"></image-slot><span aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background-image:url(assets/grano.png);background-size:180px;opacity:.14;mix-blend-mode:overlay;"></span></sc-if>
+              <sc-if value="{{ isPausa }}"><image-slot alt="Descanso" id="e4-sc-pausa" src="assets/e4/06-descanso.jpg" shape="rect" placeholder="Imagen 6 · Descanso" style="filter:saturate(.86) contrast(1.05);"></image-slot><span aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background-image:url(assets/grano.png);background-size:180px;opacity:.14;mix-blend-mode:overlay;"></span></sc-if>
+              <sc-if value="{{ isAmb }}"><image-slot alt="Ambiente sonoro" id="e4-sc-ambiente" src="assets/e4/07-ambiente.jpg" shape="rect" placeholder="Imagen 7 · Ambiente sonoro" style="filter:saturate(.86) contrast(1.05);"></image-slot><span aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background-image:url(assets/grano.png);background-size:180px;opacity:.14;mix-blend-mode:overlay;"></span></sc-if>
+              <sc-if value="{{ isEns }}"><image-slot alt="Primer ensamble" id="e4-sc-ensamble" src="assets/e4/08-ensamble.jpg" shape="rect" placeholder="Imagen 8 · Primer ensamble" style="filter:saturate(.86) contrast(1.05);"></image-slot><span aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background-image:url(assets/grano.png);background-size:180px;opacity:.14;mix-blend-mode:overlay;"></span></sc-if>
+              <sc-if value="{{ isPro }}"><image-slot alt="Imagen · Tu cortina musical" id="e4-sc-pro" src="assets/e4/pro-cortina.jpg" shape="rect" placeholder="Imagen · Tu cortina musical" style="filter:saturate(.86) contrast(1.05);"></image-slot><span aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background-image:url(assets/grano.png);background-size:180px;opacity:.14;mix-blend-mode:overlay;"></span></sc-if>
+            </div>
+          </div>
+        </div>
+
+        <sc-if value="{{ hasSteps }}">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:1px;background:#DCE6F5;border:1px solid #DCE6F5;border-radius:16px;overflow:hidden;">
+            <div style="background:#FFFFFF;padding:14px 16px;display:flex;gap:10px;align-items:flex-start;"><b style="flex:none;width:28px;height:28px;border-radius:50%;background:#6BE3D7;color:#001F19;display:inline-flex;align-items:center;justify-content:center;font-size:14px;">1</b><span style="display:flex;flex-direction:column;gap:2px;"><b style="font-size:15px;">Prueba</b><span style="font-size:15px;line-height:1.45;">{{ stP }}</span></span></div>
+            <div style="background:#FFFFFF;padding:14px 16px;display:flex;gap:10px;align-items:flex-start;"><b style="flex:none;width:28px;height:28px;border-radius:50%;background:#2F6FE0;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;font-size:14px;">2</b><span style="display:flex;flex-direction:column;gap:2px;"><b style="font-size:15px;">Descubre</b><span style="font-size:15px;line-height:1.45;">{{ stD }}</span></span></div>
+            <div style="background:#FFFFFF;padding:14px 16px;display:flex;gap:10px;align-items:flex-start;"><b style="flex:none;width:28px;height:28px;border-radius:50%;background:#001F19;color:#6BE3D7;display:inline-flex;align-items:center;justify-content:center;font-size:14px;">3</b><span style="display:flex;flex-direction:column;gap:2px;"><b style="font-size:15px;">Crea</b><span style="font-size:15px;line-height:1.45;">{{ stA }}</span></span></div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isCast }}">
+          <div style="border-radius:18px;overflow:hidden;background:#001F19;color:#FFFFFF;">
+            <div style="padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center;"><b style="font-size:15px;">La misma frase, 3 voces · ¿cuál es Doña Rosa?</b><span style="font-size:14px;color:#B6E2FF;">"Mijo, el tinto no espera. Y yo tampoco."</span></div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:1px;background:rgba(255,255,255,.12);">
+              <sc-for list="{{ voices }}" as="v" hint-placeholder-count="3">
+                <div style="background:#001F19;padding:16px;display:flex;flex-direction:column;gap:10px;">
+                  <span style="font-family:'Roca One Light',serif;font-size:26px;line-height:1;">{{ v.n }}</span>
+                  <span style="font-size:15px;line-height:1.5;color:#E3F0FF;">{{ v.d }}</span>
+                  <sc-if value="{{ v.on }}"><button type="button" onClick="{{ v.pick }}" aria-pressed="true" style="border:0;background:#6BE3D7;color:#001F19;font-weight:700;font-size:14px;padding:9px 12px;border-radius:12px;cursor:pointer;">✓ Esta es Doña Rosa</button></sc-if>
+                  <sc-if value="{{ v.off }}"><button type="button" onClick="{{ v.pick }}" aria-pressed="false" style="border:1px solid rgba(255,255,255,.3);background:transparent;color:#FFFFFF;font-weight:700;font-size:14px;padding:9px 12px;border-radius:12px;cursor:pointer;">Esta es Doña Rosa</button></sc-if>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+          <sc-if value="{{ vPicked }}">
+            <div style="border:1px solid #DCE6F5;border-radius:18px;overflow:hidden;">
+              <div style="display:grid;grid-template-columns:minmax(0,1.1fr) repeat(3,minmax(0,1fr));gap:8px;padding:10px 16px;background:#F2F6FC;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;"><span>Qué cambia</span><span>Voz A</span><span>Voz B</span><span>Voz C</span></div>
+              <sc-for list="{{ vRows }}" as="r" hint-placeholder-count="5">
+                <div style="display:grid;grid-template-columns:minmax(0,1.1fr) repeat(3,minmax(0,1fr));gap:8px;padding:10px 16px;border-top:1px solid #EAF0F8;font-size:15px;line-height:1.4;"><b>{{ r.k }}</b><span>{{ r.a }}</span><span>{{ r.b }}</span><span>{{ r.c }}</span></div>
+              </sc-for>
+              <div style="padding:12px 16px;background:#001F19;color:#FFFFFF;font-size:15px;line-height:1.5;">{{ vFb }}</div>
+            </div>
+          </sc-if>
+          <div style="border:2px solid #2F6FE0;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;">
+            <div style="background:#2F6FE0;color:#FFFFFF;padding:16px 18px;display:flex;flex-direction:column;gap:4px;">
+              <span style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#B6E2FF;">Tu turno</span>
+              <span style="font-family:'Roca One Light',serif;font-size:clamp(22px,3vw,28px);line-height:1.2;">Genera la voz de todo tu capítulo 1</span>
+              <span style="font-size:15px;line-height:1.5;color:#E3F0FF;">Usa todo el guion de Mi guion, no solo el gancho. A no pide cuenta y es la ruta principal; B es el respaldo.</span>
+            </div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;padding:14px 18px;border-bottom:1px solid #DCE6F5;">
+              <sc-for list="{{ vtools }}" as="v" hint-placeholder-count="0">
+                <sc-if value="{{ v.on }}"><button type="button" onClick="{{ v.pick }}" aria-pressed="true" style="display:flex;align-items:center;gap:8px;border:0;background:#001F19;color:#FFFFFF;font-weight:700;font-size:15px;padding:9px 14px;border-radius:999px;cursor:pointer;white-space:nowrap;"><span style="width:22px;height:22px;border-radius:50%;background:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;"><span style="width:16px;height:16px;"><sc-if value="{{ v.isW }}"><img src="assets/logos/wevolabs.png" alt="" style="width:100%;height:100%;object-fit:contain;display:block;"></sc-if><sc-if value="{{ v.isC }}"><img src="assets/logos/canva.png" alt="" style="width:100%;height:100%;object-fit:contain;display:block;"></sc-if></span></span>{{ v.k }} · {{ v.t }}</button></sc-if>
+                <sc-if value="{{ v.off }}"><button type="button" onClick="{{ v.pick }}" aria-pressed="false" style="display:flex;align-items:center;gap:8px;border:1px solid #C5D3EA;background:#FFFFFF;color:#001F19;font-weight:700;font-size:15px;padding:9px 14px;border-radius:999px;cursor:pointer;white-space:nowrap;"><span style="width:22px;height:22px;border-radius:50%;background:#F2F6FC;display:inline-flex;align-items:center;justify-content:center;"><span style="width:16px;height:16px;"><sc-if value="{{ v.isW }}"><img src="assets/logos/wevolabs.png" alt="" style="width:100%;height:100%;object-fit:contain;display:block;"></sc-if><sc-if value="{{ v.isC }}"><img src="assets/logos/canva.png" alt="" style="width:100%;height:100%;object-fit:contain;display:block;"></sc-if></span></span>{{ v.k }} · {{ v.t }}</button></sc-if>
+              </sc-for>
+            </div>
+            <div style="padding:16px 18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:18px;align-items:start;">
+              <div data-anim="vmock" style="border:1px solid #C5D3EA;border-radius:14px;overflow:hidden;background:#FFFFFF;display:flex;flex-direction:column;">
+                <div style="display:flex;align-items:center;gap:8px;padding:7px 10px;background:#EEF1F6;border-bottom:1px solid #DCE6F5;font-size:12px;color:#4F5F7A;"><span style="display:flex;gap:4px;"><span style="width:8px;height:8px;border-radius:50%;background:#C5D3EA;"></span><span style="width:8px;height:8px;border-radius:50%;background:#C5D3EA;"></span><span style="width:8px;height:8px;border-radius:50%;background:#C5D3EA;"></span></span><span style="flex:1;background:#FFFFFF;border-radius:6px;padding:3px 8px;">{{ vmUrl }}</span></div>
+                <div style="display:flex;min-height:230px;">
+                  <div style="width:38%;flex:none;border-right:1px solid #DCE6F5;padding:10px 8px;display:flex;flex-direction:column;gap:4px;background:#F6F9FD;">
+                    <b style="font-size:12px;color:#4F5F7A;">{{ vmLeftT }}</b>
+                    <sc-for list="{{ vmLeft }}" as="x" hint-placeholder-count="0"><div style="font-size:12px;font-weight:700;padding:6px 8px;border-radius:8px;background:{{ x.bg }};outline:{{ x.ol }};outline-offset:1px;color:#001F19;">{{ x.t }}</div></sc-for>
+                  </div>
+                  <div style="flex:1;min-width:0;padding:10px;display:flex;flex-direction:column;gap:8px;">
+                    <b style="font-size:13px;">{{ vmMainT }}</b>
+                    <sc-if value="{{ vmHasBox }}"><div style="border:1px solid #C5D3EA;border-radius:8px;padding:8px;font-size:12px;line-height:1.4;min-height:44px;outline:{{ vmBoxOl }};outline-offset:2px;">{{ vmBox }}</div></sc-if>
+                    <sc-if value="{{ vmHasChips }}"><div style="display:flex;flex-wrap:wrap;gap:4px;"><sc-for list="{{ vmChips }}" as="c" hint-placeholder-count="0"><span style="font-size:11px;font-weight:700;padding:4px 8px;border-radius:999px;border:1px solid #C5D3EA;background:{{ c.bg }};outline:{{ c.ol }};outline-offset:1px;">{{ c.t }}</span></sc-for></div></sc-if>
+                    <sc-if value="{{ vmHasBtn }}"><span style="align-self:flex-start;font-size:12px;font-weight:700;padding:6px 12px;border-radius:8px;background:#001F19;color:#FFFFFF;outline:{{ vmBtnOl }};outline-offset:2px;">{{ vmBtn }}</span></sc-if>
+                    <sc-if value="{{ vmHasPlay }}"><div style="display:flex;align-items:center;gap:6px;border:1px solid #DCE6F5;border-radius:8px;padding:6px 8px;"><span style="font-size:12px;">▶</span><span style="flex:1;height:4px;border-radius:2px;background:linear-gradient(90deg,#2F6FE0 40%,#DCE6F5 40%);"></span><span style="font-size:12px;padding:2px 6px;border-radius:6px;outline:{{ vmDlOl }};outline-offset:1px;">⬇</span></div></sc-if>
+                    <sc-if value="{{ vmHasNote }}"><span style="font-size:11px;color:#4F5F7A;">{{ vmNote }}</span></sc-if>
+                  </div>
+                </div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:12px;">
+                <div style="display:flex;gap:6px;flex-wrap:wrap;">
+                  <sc-for list="{{ vSteps }}" as="d" hint-placeholder-count="0">
+                    <sc-if value="{{ d.on }}"><button type="button" onClick="{{ d.go }}" aria-label="Paso {{ d.n }}" style="width:32px;height:32px;border-radius:50%;border:0;background:#2F6FE0;color:#FFFFFF;font-weight:700;font-size:14px;cursor:pointer;">{{ d.n }}</button></sc-if>
+                    <sc-if value="{{ d.done }}"><button type="button" onClick="{{ d.go }}" aria-label="Paso {{ d.n }}" style="width:32px;height:32px;border-radius:50%;border:0;background:#6BE3D7;color:#001F19;font-weight:700;font-size:14px;cursor:pointer;">✓</button></sc-if>
+                    <sc-if value="{{ d.todo }}"><button type="button" onClick="{{ d.go }}" aria-label="Paso {{ d.n }}" style="width:32px;height:32px;border-radius:50%;border:1px solid #C5D3EA;background:#FFFFFF;color:#001F19;font-weight:700;font-size:14px;cursor:pointer;">{{ d.n }}</button></sc-if>
+                  </sc-for>
+                </div>
+                <span style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#1F4FB0;">Paso {{ vStepN }} de {{ vStepTot }}</span>
+                <b style="font-size:18px;line-height:1.3;">{{ vStepT }}</b>
+                <span style="font-size:15px;line-height:1.55;">{{ vStepD }}</span>
+                <span style="font-size:14px;line-height:1.45;color:#34405A;">Lo naranja en la imagen es donde debes tocar.</span>
+                <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                  <button type="button" onClick="{{ vPrev }}" style="border:1px solid #C5D3EA;background:#FFFFFF;color:#001F19;font-weight:700;font-size:15px;padding:9px 16px;border-radius:999px;cursor:pointer;white-space:nowrap;">← Anterior</button>
+                  <button data-tap="1" type="button" onClick="{{ vNext }}" style="border:0;background:#2F6FE0;color:#FFFFFF;font-weight:700;font-size:15px;padding:9px 16px;border-radius:999px;cursor:pointer;white-space:nowrap;">{{ vNextL }}</button>
+                </div>
+                <a href="{{ vHref }}" target="_blank" rel="noopener" style="align-self:flex-start;display:inline-flex;align-items:center;gap:8px;background:#001F19;color:#FFFFFF;font-weight:700;font-size:15px;padding:9px 16px;border-radius:999px;text-decoration:none;">{{ vOpen }}</a>
+              </div>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));border-top:1px solid #DCE6F5;">
+              <div style="padding:14px 18px;display:flex;flex-direction:column;gap:6px;">
+                <b style="font-size:15px;">Limitaciones</b>
+                <sc-for list="{{ vLim }}" as="x" hint-placeholder-count="3"><div style="display:flex;gap:8px;font-size:15px;line-height:1.5;"><span style="color:#C2410C;font-weight:700;flex:none;">!</span><span>{{ x }}</span></div></sc-for>
+              </div>
+              <div style="padding:14px 18px;display:flex;flex-direction:column;gap:6px;border-left:1px solid #DCE6F5;background:#F6F9FD;">
+                <b style="font-size:15px;">{{ vTipsT }}</b>
+                <sc-for list="{{ vTips }}" as="x" hint-placeholder-count="3"><div style="display:flex;gap:8px;font-size:15px;line-height:1.5;"><span style="color:#0E6B5E;font-weight:700;flex:none;">✓</span><span>{{ x }}</span></div></sc-for>
+              </div>
+            </div>
+            <div style="padding:12px 18px;border-top:1px solid #DCE6F5;font-size:15px;line-height:1.5;display:flex;flex-direction:column;gap:4px;">
+              <span><b>Guárdalo:</b> descarga el audio y ponlo en tu carpeta como <b>voz-cap1.mp3</b>. En tus créditos dirás que es una voz creada con IA.</span>
+              <span style="color:#34405A;">¿No funciona WevoLabs? Usa el texto a voz de Canva (B). En clase, tu docente también puede compartirte una voz preparada.</span>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isMus }}">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:14px;align-items:start;">
+            <div style="border:1px solid #DCE6F5;border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:10px;">
+              <b style="font-size:17px;">Arma un prompt musical</b>
+              <sc-for list="{{ pParts }}" as="pp" hint-placeholder-count="5">
+                <div style="display:flex;flex-direction:column;gap:6px;">
+                  <span style="font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#1F4FB0;">{{ pp.k }}</span>
+                  <div style="display:flex;gap:6px;flex-wrap:wrap;">
+                    <sc-for list="{{ pp.opts }}" as="o" hint-placeholder-count="4">
+                      <sc-if value="{{ o.on }}"><button type="button" onClick="{{ o.pick }}" aria-pressed="true" style="border:0;background:#001F19;color:#FFFFFF;font-weight:700;font-size:14px;padding:7px 12px;border-radius:999px;cursor:pointer;">{{ o.t }}</button></sc-if>
+                      <sc-if value="{{ o.off }}"><button type="button" onClick="{{ o.pick }}" aria-pressed="false" style="border:1px solid #D3DEEF;background:#FFFFFF;color:#001F19;font-weight:700;font-size:14px;padding:7px 12px;border-radius:999px;cursor:pointer;">{{ o.t }}</button></sc-if>
+                    </sc-for>
+                  </div>
+                </div>
+              </sc-for>
+              <div style="background:#001F19;color:#FFFFFF;border-radius:12px;padding:12px 14px;font-size:15px;line-height:1.55;">{{ pTxt }}</div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:10px;">
+              <div style="border:1px solid #DCE6F5;border-radius:16px;padding:14px 16px;display:flex;flex-direction:column;gap:8px;">
+                <span style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;">El prompt de Valentina</span>
+                <div style="display:flex;flex-direction:column;gap:2px;"><b style="font-size:14px;color:#A42F27;">Antes</b><del style="font-size:15px;line-height:1.5;color:#4F5F7A;text-decoration-color:#C93B31;">Música bonita para podcast.</del></div>
+                <div style="display:flex;flex-direction:column;gap:2px;"><b style="font-size:14px;color:#0E6B5E;">Después</b><span style="font-size:15px;line-height:1.5;"><mark style="background:#B9F0EA;color:#001F19;padding:0 3px;">Música de fondo acústica, cálida y un poco nostálgica, con guitarra, ritmo lento. Sin voz cantada. Que no tape la narración.</mark></span></div>
+              </div>
+              <div style="background:#F2F6FC;border-radius:16px;padding:14px 16px;display:flex;flex-direction:column;gap:8px;">
+                <b style="font-size:16px;">Con tu prompt, consigue tu pista</b>
+                <span style="font-size:15px;line-height:1.5;">Elige una de estas dos formas:</span>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:10px;">
+                  <div style="border:1px solid #DCE6F5;border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:6px;background:#FFFFFF;"><div style="display:flex;align-items:center;gap:8px;"><img src="assets/logos/mixkit.png" alt="" style="width:22px;height:22px;object-fit:contain;"><img src="assets/logos/pixabay.png" alt="" style="height:22px;width:auto;max-width:60px;object-fit:contain;"><b style="font-size:15px;">A · Mixkit o Pixabay</b></div><span style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1F4FB0;">Bibliotecas · música ya creada</span><span style="font-size:15px;line-height:1.5;">Son bibliotecas de pistas ya hechas, de uso libre: no crean música, la buscas y la descargas. Busca con 2 o 3 palabras de tu prompt y escucha al menos 3 pistas antes de elegir.</span></div>
+                  <div style="border:1px solid #DCE6F5;border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:6px;background:#FFFFFF;"><div style="display:flex;align-items:center;gap:8px;"><img src="assets/logos/gemini.png" alt="" style="width:22px;height:22px;object-fit:contain;"><b style="font-size:15px;">B · Gemini</b></div><span style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#1F4FB0;">Crea tu propia música con IA</span><span style="font-size:15px;line-height:1.5;">En gemini.google.com, con tu cuenta personal, toca <b>+</b> › <b>Más herramientas</b> › <b>Crear música</b>. Pega tu prompt y escucha el resultado. Si no te aparece <b>Crear música</b>, usa la Ruta A.</span></div>
+                </div>
+                <span style="font-size:14px;line-height:1.45;color:#34405A;">En tus créditos dirás de dónde salió: el nombre de la pista y su autor, o "música creada con Gemini".</span>
+              </div>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isPausa }}">
+          <div style="background:radial-gradient(70% 120% at 100% 0%,rgba(107,227,215,.35),transparent 60%),#001F19;color:#FFFFFF;border-radius:20px;padding:clamp(24px,4vw,40px);display:flex;flex-direction:column;gap:10px;">
+            <span style="font-family:'Roca One Light',serif;font-size:clamp(26px,4vw,36px);line-height:1.15;">Pausa del estudio</span>
+            <span style="font-size:16px;line-height:1.6;">Quítate los audífonos y descansa los oídos. Cuando vuelvas, escucha: ¿qué suena a tu alrededor ahora mismo?</span>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isAmb }}">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:14px;align-items:start;">
+            <div style="border:1px solid #DCE6F5;border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:8px;">
+              <b style="font-size:17px;">Tu turno: el lugar de tu historia</b>
+              <span style="font-size:15px;line-height:1.5;">Elige 2 o 3 sonidos que digan dónde estás. Búscalos en Mixkit o Pixabay: lluvia, una cocina, una calle a lo lejos.</span>
+              <span style="font-size:15px;line-height:1.5;"><b>Tú:</b> guarda los sonidos en tu carpeta. Los usas en el Primer ensamble.</span>
+            </div>
+            <div style="background:#FDECEA;border-radius:16px;padding:14px 16px;display:flex;flex-direction:column;gap:6px;"><b style="font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#A42F27;">Antes de descargar</b><span style="font-size:15px;line-height:1.5;">Elige sonidos sin voces que se entiendan y lee la licencia de cada uno. Anota de dónde salió para tus créditos.</span></div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isEns }}">
+          <div style="background:#F2F6FC;border-radius:16px;padding:14px 16px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;">
+            <span style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:220px;"><b style="font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#1F4FB0;">Tu predicción</b><span style="font-size:16px;line-height:1.45;font-weight:700;">{{ pQ }}</span></span>
+            <sc-if value="{{ pOpen }}" hint-placeholder-val="{{ true }}"><div style="display:flex;flex-wrap:wrap;gap:8px;"><sc-for list="{{ pOpts }}" as="o" hint-placeholder-count="3"><button data-tap="1" type="button" onClick="{{ o.pick }}" style="flex:0 0 auto;max-width:100%;white-space:nowrap;border:1px solid #D3DEEF;background:#FFFFFF;color:#001F19;font-weight:700;font-size:15px;padding:9px 14px;border-radius:999px;cursor:pointer;">{{ o.t }}</button></sc-for></div></sc-if>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;"><b style="font-size:15px;">Una buena mezcla:</b><div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;"><span style="background:#6BE3D7;color:#001F19;font-weight:700;font-size:14px;padding:6px 12px;border-radius:999px;">La voz manda · 100</span><span style="background:#6BE3D7;color:#001F19;font-weight:700;font-size:14px;padding:6px 12px;border-radius:999px;">Música · ~20</span><span style="background:#6BE3D7;color:#001F19;font-weight:700;font-size:14px;padding:6px 12px;border-radius:999px;">Ambiente · ~15</span></div></div>
+          <div style="border-radius:18px;overflow:hidden;background:#001F19;color:#FFFFFF;">
+            <div style="padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.12);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center;"><b style="font-size:15px;">Mezcla de prueba · Voces del andén</b><span style="font-size:14px;color:#B6E2FF;">Mueve los volúmenes mientras suena</span></div>
+            <div style="padding:16px;display:flex;flex-direction:column;gap:12px;">
+              <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+                <sc-if value="{{ mixPlaying }}"><button type="button" onClick="{{ mixPlay }}" style="border:0;background:#FFFFFF;color:#001F19;font-weight:700;font-size:15px;padding:11px 18px;border-radius:999px;cursor:pointer;">■ Detener</button></sc-if>
+                <sc-if value="{{ mixNotPlaying }}"><button type="button" onClick="{{ mixPlay }}" style="border:0;background:#6BE3D7;color:#001F19;font-weight:700;font-size:15px;padding:11px 18px;border-radius:999px;cursor:pointer;">▶ Escuchar la mezcla</button></sc-if>
+                <sc-if value="{{ mixMiss }}"><span style="align-self:flex-start;background:#C93B31;color:#FFFFFF;font-weight:700;font-size:13px;letter-spacing:.08em;padding:4px 10px;border-radius:6px;">No se pudo cargar el audio. Recarga la página.</span></sc-if><span style="font-size:13px;color:#B6E2FF;width:100%;">Créditos: voz creada con IA (WevoLabs) · música "Classical 8" de Jonny S. (Mixkit) · ambiente creado con IA (Adobe Firefly).</span>
+              </div>
+              <sc-for list="{{ mixer }}" as="m" hint-placeholder-count="3">
+                <div style="display:grid;grid-template-columns:minmax(0,120px) minmax(0,1fr) 44px;gap:10px;align-items:center;">
+                  <b style="font-size:14px;">{{ m.n }}</b>
+                  <div style="display:flex;flex-direction:column;gap:6px;">
+                    <div style="height:30px;display:flex;align-items:center;border-radius:6px;background:rgba(255,255,255,.06);padding:0 6px;"><span style="flex:1;border-radius:4px;background:{{ m.col }};height:{{ m.h }};transition:height .15s ease-out;"></span></div>
+                    <input type="range" min="0" max="100" step="5" value="{{ m.v }}" onChange="{{ m.set }}" aria-label="Volumen {{ m.n }}" style="width:100%;">
+                  </div>
+                  <b style="font-size:14px;text-align:right;">{{ m.v }}</b>
+                </div>
+              </sc-for>
+              <sc-if value="{{ mixOk }}"><div style="background:#6BE3D7;color:#001F19;border-radius:12px;padding:12px 14px;font-size:15px;line-height:1.5;font-weight:700;">{{ mixMsg }}</div></sc-if>
+              <sc-if value="{{ mixBad }}"><div style="background:#FFFFFF;color:#001F19;border-radius:12px;padding:12px 14px;font-size:15px;line-height:1.5;">{{ mixMsg }}</div></sc-if>
+            </div>
+          </div>
+          <div style="border:1px solid #DCE6F5;border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:12px;">
+            <b style="font-size:17px;">Tu turno: tu primer ensamble en Canva</b>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <div style="display:grid;grid-template-columns:minmax(0,110px) minmax(0,1fr);gap:10px;align-items:center;"><b style="font-size:14px;">Pista 1 · Voz</b><div style="display:flex;gap:4px;height:22px;"><span style="flex:1;border-radius:4px;background:#6BE3D7;"></span><span style="flex:3;border-radius:4px;background:#6BE3D7;"></span><span style="flex:2;border-radius:4px;background:#6BE3D7;"></span></div></div>
+              <div style="display:grid;grid-template-columns:minmax(0,110px) minmax(0,1fr);gap:10px;align-items:center;"><b style="font-size:14px;">Pista 2 · Música</b><div style="display:flex;gap:4px;height:22px;"><span style="flex:0.6;"></span><span style="flex:5.4;border-radius:4px;background:#CFE3FF;"></span></div></div>
+              <div style="display:grid;grid-template-columns:minmax(0,110px) minmax(0,1fr);gap:10px;align-items:center;"><b style="font-size:14px;">Pista 3 · Ambiente</b><div style="display:flex;gap:4px;height:22px;"><span style="flex:4;border-radius:4px;background:#5691FF;"></span><span style="flex:2;"></span></div></div>
+            </div>
+            <span style="font-size:15px;line-height:1.5;">Cada sonido va en su propia pista. Lo naranja es donde tocas.</span>
+            <div style="display:flex;flex-direction:column;gap:8px;border-top:1px solid #EAF0F8;padding-top:10px;"><span style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#1F4FB0;">Prepara</span><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:14px;"><div style="display:flex;flex-direction:column;gap:6px;"><div style="border:1px solid #C5D3EA;border-radius:10px;overflow:hidden;background:#FFFFFF;display:flex;flex-direction:column;height:118px;"><div style="display:flex;align-items:center;gap:6px;padding:3px 6px;background:linear-gradient(90deg,#00C4CC,#3B6FE0);color:#FFFFFF;font-size:8px;font-weight:700;"><span>⌂</span><span style="background:#FFFFFF;color:#1F4FB0;padding:1px 5px;border-radius:3px;outline:2px solid #F47B20;outline-offset:1px;">Voces del andén</span></div><div style="display:flex;flex:1;min-height:0;overflow:hidden;"><div style="width:30px;flex:none;background:#FFFFFF;border-right:1px solid #DCE6F5;display:flex;flex-direction:column;align-items:center;gap:5px;padding:5px 0;"><span style="font-size:10px;width:20px;height:16px;display:flex;align-items:center;justify-content:center;border-radius:4px;color:#6E7D96;">▣</span><span style="font-size:10px;width:20px;height:16px;display:flex;align-items:center;justify-content:center;border-radius:4px;color:#6E7D96;">T</span><span style="font-size:10px;width:20px;height:16px;display:flex;align-items:center;justify-content:center;border-radius:4px;color:#6E7D96;">☁</span><span style="font-size:10px;width:20px;height:16px;display:flex;align-items:center;justify-content:center;border-radius:4px;color:#6E7D96;">⊞</span></div><div style="flex:1;min-width:0;background:#EEF1F6;display:flex;align-items:center;justify-content:center;padding:6px;min-height:0;overflow:hidden;"><div style="height:100%;max-width:100%;aspect-ratio:16/9;background:#FFFFFF;border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:9px;color:#6E7D96;">Video</div></div></div></div><div style="display:flex;gap:8px;align-items:flex-start;"><b style="width:24px;height:24px;flex:none;border-radius:50%;background:#2F6FE0;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;font-size:13px;">1</b><div style="display:flex;flex-direction:column;gap:1px;"><b style="font-size:15px;">Crea el diseño</b><span style="font-size:14px;line-height:1.45;color:#34405A;"><b>Crear un diseño › Video</b>. Cámbiale el nombre por el de tu historia.</span></div></div></div><div style="display:flex;flex-direction:column;gap:6px;"><div style="border:1px solid #C5D3EA;border-radius:10px;overflow:hidden;background:#FFFFFF;display:flex;flex-direction:column;height:118px;"><div style="display:flex;align-items:center;gap:6px;padding:3px 6px;background:linear-gradient(90deg,#00C4CC,#3B6FE0);color:#FFFFFF;font-size:8px;font-weight:700;"><span>⌂</span><span style="">Archivo</span></div><div style="display:flex;flex:1;min-height:0;overflow:hidden;"><div style="width:30px;flex:none;background:#FFFFFF;border-right:1px solid #DCE6F5;display:flex;flex-direction:column;align-items:center;gap:5px;padding:5px 0;"><span style="font-size:10px;width:20px;height:16px;display:flex;align-items:center;justify-content:center;border-radius:4px;color:#6E7D96;">▣</span><span style="font-size:10px;width:20px;height:16px;display:flex;align-items:center;justify-content:center;border-radius:4px;color:#6E7D96;">T</span><span style="font-size:10px;width:20px;height:16px;display:flex;align-items:center;justify-content:center;border-radius:4px;background:#E1EEFF;outline:2px solid #F47B20;outline-offset:1px;">☁</span><span style="font-size:10px;width:20px;height:16px;display:flex;align-items:center;justify-content:center;border-radius:4px;color:#6E7D96;">⊞</span></div><div style="width:42%;padding:5px;display:flex;flex-direction:column;gap:3px;border-right:1px solid #DCE6F5;"><span style="font-size:8px;font-weight:700;background:#7D2AE8;color:#FFFFFF;border-radius:3px;padding:2px;text-align:center;outline:2px solid #F47B20;outline-offset:1px;">Subir archivos</span><span style="font-size:8px;background:#F2F6FC;border-radius:3px;padding:2px 3px;">♪ voz.mp3</span><span style="font-size:8px;background:#F2F6FC;border-radius:3px;padding:2px 3px;">♪ musica.mp3</span><span style="font-size:8px;background:#F2F6FC;border-radius:3px;padding:2px 3px;">♪ ambiente.mp3</span></div><div style="flex:1;min-width:0;background:#EEF1F6;display:flex;align-items:center;justify-content:center;padding:6px;min-height:0;overflow:hidden;"><div style="height:100%;max-width:100%;aspect-ratio:16/9;background:#FFFFFF;border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:9px;color:#6E7D96;"></div></div></div></div><div style="display:flex;gap:8px;align-items:flex-start;"><b style="width:24px;height:24px;flex:none;border-radius:50%;background:#2F6FE0;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;font-size:13px;">2</b><div style="display:flex;flex-direction:column;gap:1px;"><b style="font-size:15px;">Sube tus audios</b><span style="font-size:14px;line-height:1.45;color:#34405A;"><b>Subidos › Subir archivos</b>: voz, música y ambientes.</span></div></div></div></div></div>
+            <div style="display:flex;flex-direction:column;gap:8px;border-top:1px solid #EAF0F8;padding-top:10px;"><span style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#1F4FB0;">Arma las pistas</span><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:14px;"><div style="display:flex;flex-direction:column;gap:6px;"><div style="border:1px solid #C5D3EA;border-radius:10px;overflow:hidden;background:#FFFFFF;display:flex;flex-direction:column;height:118px;"><div style="display:flex;align-items:center;gap:6px;padding:3px 6px;background:linear-gradient(90deg,#00C4CC,#3B6FE0);color:#FFFFFF;font-size:8px;font-weight:700;"><span>⌂</span><span style="">Archivo</span></div><div style="display:flex;flex:1;min-height:0;overflow:hidden;"><div style="width:30px;flex:none;background:#FFFFFF;border-right:1px solid #DCE6F5;display:flex;flex-direction:column;align-items:center;gap:5px;padding:5px 0;"><span style="font-size:10px;width:20px;height:16px;display:flex;align-items:center;justify-content:center;border-radius:4px;color:#6E7D96;">▣</span><span style="font-size:10px;width:20px;height:16px;display:flex;align-items:center;justify-content:center;border-radius:4px;color:#6E7D96;">T</span><span style="font-size:10px;width:20px;height:16px;display:flex;align-items:center;justify-content:center;border-radius:4px;background:#E1EEFF;outline:2px solid #F47B20;outline-offset:1px;">☁</span><span style="font-size:10px;width:20px;height:16px;display:flex;align-items:center;justify-content:center;border-radius:4px;color:#6E7D96;">⊞</span></div><div style="flex:1;min-width:0;background:#EEF1F6;display:flex;align-items:center;justify-content:center;padding:6px;min-height:0;overflow:hidden;"><div style="height:100%;max-width:100%;aspect-ratio:16/9;background:#FFFFFF;border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:9px;color:#6E7D96;"></div></div></div><div style="background:#FFFFFF;border-top:1px solid #DCE6F5;padding:5px 6px;display:flex;flex-direction:column;gap:3px;"><div style="position:relative;height:10px;"><span style="position:absolute;left:0%;width:70%;top:0;bottom:0;border-radius:3px;background:#6BE3D7;outline:2px solid #F47B20;outline-offset:1px;"></span><span style="position:absolute;left:2%;top:-1px;font-size:8px;font-weight:700;color:#001F19;">Voz</span></div></div></div><div style="display:flex;gap:8px;align-items:flex-start;"><b style="width:24px;height:24px;flex:none;border-radius:50%;background:#2F6FE0;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;font-size:13px;">3</b><div style="display:flex;flex-direction:column;gap:1px;"><b style="font-size:15px;">Voz primero</b><span style="font-size:14px;line-height:1.45;color:#34405A;">Arrástrala a la línea de tiempo, debajo de la página.</span></div></div></div><div style="display:flex;flex-direction:column;gap:6px;"><div style="border:1px solid #C5D3EA;border-radius:10px;overflow:hidden;background:#FFFFFF;display:flex;flex-direction:column;height:118px;"><div style="display:flex;align-items:center;gap:6px;padding:3px 6px;background:linear-gradient(90deg,#00C4CC,#3B6FE0);color:#FFFFFF;font-size:8px;font-weight:700;"><span>⌂</span><span style="">Archivo</span></div><div style="display:flex;flex:1;min-height:0;overflow:hidden;"><div style="width:30px;flex:none;background:#FFFFFF;border-right:1px solid #DCE6F5;display:flex;flex-direction:column;align-items:center;gap:5px;padding:5px 0;"><span style="font-size:10px;width:20px;height:16px;display:flex;align-items:center;justify-content:center;border-radius:4px;color:#6E7D96;">▣</span><span style="font-size:10px;width:20px;height:16px;display:flex;align-items:center;justify-content:center;border-radius:4px;color:#6E7D96;">T</span><span style="font-size:10px;width:20px;height:16px;display:flex;align-items:center;justify-content:center;border-radius:4px;background:#E1EEFF;outline:2px solid #F47B20;outline-offset:1px;">☁</span><span style="font-size:10px;width:20px;height:16px;display:flex;align-items:center;justify-content:center;border-radius:4px;color:#6E7D96;">⊞</span></div><div style="flex:1;min-width:0;background:#EEF1F6;display:flex;align-items:center;justify-content:center;padding:6px;min-height:0;overflow:hidden;"><div style="height:100%;max-width:100%;aspect-ratio:16/9;background:#FFFFFF;border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:9px;color:#6E7D96;"></div></div></div><div style="background:#FFFFFF;border-top:1px solid #DCE6F5;padding:5px 6px;display:flex;flex-direction:column;gap:3px;"><div style="position:relative;height:10px;"><span style="position:absolute;left:0%;width:70%;top:0;bottom:0;border-radius:3px;background:#6BE3D7;"></span><span style="position:absolute;left:2%;top:-1px;font-size:8px;font-weight:700;color:#001F19;">Voz</span></div><div style="position:relative;height:10px;"><span style="position:absolute;left:18%;width:82%;top:0;bottom:0;border-radius:3px;background:#9DC1FF;outline:2px solid #F47B20;outline-offset:1px;"></span><span style="position:absolute;left:20%;top:-1px;font-size:8px;font-weight:700;color:#001F19;">Música</span></div></div></div><div style="display:flex;gap:8px;align-items:flex-start;"><b style="width:24px;height:24px;flex:none;border-radius:50%;background:#2F6FE0;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;font-size:13px;">4</b><div style="display:flex;flex-direction:column;gap:1px;"><b style="font-size:15px;">Música debajo</b><span style="font-size:14px;line-height:1.45;color:#34405A;">Suéltala debajo de la voz. Que entre después del gancho.</span></div></div></div><div style="display:flex;flex-direction:column;gap:6px;"><div style="border:1px solid #C5D3EA;border-radius:10px;overflow:hidden;background:#FFFFFF;display:flex;flex-direction:column;height:118px;"><div style="display:flex;align-items:center;gap:6px;padding:3px 6px;background:linear-gradient(90deg,#00C4CC,#3B6FE0);color:#FFFFFF;font-size:8px;font-weight:700;"><span>⌂</span><span style="">Archivo</span></div><div style="display:flex;flex:1;min-height:0;overflow:hidden;"><div style="width:30px;flex:none;background:#FFFFFF;border-right:1px solid #DCE6F5;display:flex;flex-direction:column;align-items:center;gap:5px;padding:5px 0;"><span style="font-size:10px;width:20px;height:16px;display:flex;align-items:center;justify-content:center;border-radius:4px;color:#6E7D96;">▣</span><span style="font-size:10px;width:20px;height:16px;display:flex;align-items:center;justify-content:center;border-radius:4px;color:#6E7D96;">T</span><span style="font-size:10px;width:20px;height:16px;display:flex;align-items:center;justify-content:center;border-radius:4px;background:#E1EEFF;outline:2px solid #F47B20;outline-offset:1px;">☁</span><span style="font-size:10px;width:20px;height:16px;display:flex;align-items:center;justify-content:center;border-radius:4px;color:#6E7D96;">⊞</span></div><div style="flex:1;min-width:0;background:#EEF1F6;display:flex;align-items:center;justify-content:center;padding:6px;min-height:0;overflow:hidden;"><div style="height:100%;max-width:100%;aspect-ratio:16/9;background:#FFFFFF;border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:9px;color:#6E7D96;"></div></div></div><div style="background:#FFFFFF;border-top:1px solid #DCE6F5;padding:5px 6px;display:flex;flex-direction:column;gap:3px;"><div style="position:relative;height:10px;"><span style="position:absolute;left:0%;width:70%;top:0;bottom:0;border-radius:3px;background:#6BE3D7;"></span><span style="position:absolute;left:2%;top:-1px;font-size:8px;font-weight:700;color:#001F19;">Voz</span></div><div style="position:relative;height:10px;"><span style="position:absolute;left:18%;width:82%;top:0;bottom:0;border-radius:3px;background:#9DC1FF;"></span><span style="position:absolute;left:20%;top:-1px;font-size:8px;font-weight:700;color:#001F19;">Música</span></div><div style="position:relative;height:10px;"><span style="position:absolute;left:0%;width:100%;top:0;bottom:0;border-radius:3px;background:#5691FF;outline:2px solid #F47B20;outline-offset:1px;"></span><span style="position:absolute;left:2%;top:-1px;font-size:8px;font-weight:700;color:#001F19;">Ambiente</span></div></div></div><div style="display:flex;gap:8px;align-items:flex-start;"><b style="width:24px;height:24px;flex:none;border-radius:50%;background:#2F6FE0;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;font-size:13px;">5</b><div style="display:flex;flex-direction:column;gap:1px;"><b style="font-size:15px;">Ambiente al final</b><span style="font-size:14px;line-height:1.45;color:#34405A;">Debajo de la música.</span></div></div></div></div></div>
+            <div style="display:flex;flex-direction:column;gap:8px;border-top:1px solid #EAF0F8;padding-top:10px;"><span style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#1F4FB0;">Ajusta</span><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:14px;"><div style="display:flex;flex-direction:column;gap:6px;"><div style="border:1px solid #C5D3EA;border-radius:10px;overflow:hidden;background:#FFFFFF;display:flex;flex-direction:column;height:118px;"><div style="display:flex;align-items:center;gap:6px;padding:3px 6px;background:#FFFFFF;border-bottom:1px solid #DCE6F5;font-size:8px;font-weight:700;"><span>Fundir</span><span>Volumen</span><span style="margin-left:auto;padding:1px 4px;border-radius:3px;background:#E1EEFF;outline:2px solid #F47B20;outline-offset:1px;">⋯ › Dividir</span></div><div style="display:flex;flex:1;min-height:0;overflow:hidden;"><div style="flex:1;min-width:0;background:#EEF1F6;display:flex;align-items:center;justify-content:center;padding:6px;min-height:0;overflow:hidden;"><div style="height:100%;max-width:100%;aspect-ratio:16/9;background:#FFFFFF;border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:9px;color:#6E7D96;"></div></div></div><div style="background:#FFFFFF;border-top:1px solid #DCE6F5;padding:5px 6px;display:flex;flex-direction:column;gap:3px;"><div style="position:relative;height:10px;"><span style="position:absolute;left:0;width:55%;top:0;bottom:0;border-radius:3px;background:#6BE3D7;"></span><span style="position:absolute;left:57%;width:20%;top:0;bottom:0;border-radius:3px;background:#6BE3D7;opacity:.45;"></span><span style="position:absolute;left:56%;top:-3px;bottom:-3px;width:2px;background:#F47B20;"></span></div></div></div><div style="display:flex;gap:8px;align-items:flex-start;"><b style="width:24px;height:24px;flex:none;border-radius:50%;background:#2F6FE0;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;font-size:13px;">6</b><div style="display:flex;flex-direction:column;gap:1px;"><b style="font-size:15px;">Corta lo que sobra</b><span style="font-size:14px;line-height:1.45;color:#34405A;">Pon la línea donde quieres cortar, toca los <b>3 puntitos (⋯)</b> del audio y elige <b>Dividir</b>. Borra el pedazo que sobra.</span></div></div></div><div style="display:flex;flex-direction:column;gap:6px;"><div style="border:1px solid #C5D3EA;border-radius:10px;overflow:hidden;background:#FFFFFF;display:flex;flex-direction:column;height:118px;"><div style="display:flex;align-items:center;gap:6px;padding:3px 6px;background:#FFFFFF;border-bottom:1px solid #DCE6F5;font-size:8px;font-weight:700;"><span style="padding:1px 5px;border-radius:3px;background:#E1EEFF;outline:2px solid #F47B20;outline-offset:1px;">🔊</span><span style="flex:1;height:3px;border-radius:2px;background:linear-gradient(90deg,#2F6FE0 20%,#DCE6F5 20%);"></span><span>20</span></div><div style="display:flex;flex:1;min-height:0;"><div style="flex:1;min-width:0;background:#EEF1F6;display:flex;align-items:center;justify-content:center;padding:6px;min-height:0;overflow:hidden;"><div style="height:100%;max-width:100%;aspect-ratio:16/9;background:#FFFFFF;border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:9px;color:#6E7D96;"></div></div></div><div style="background:#FFFFFF;border-top:1px solid #DCE6F5;padding:5px 6px;display:flex;flex-direction:column;gap:3px;"><div style="position:relative;height:10px;"><span style="position:absolute;left:0%;width:70%;top:0;bottom:0;border-radius:3px;background:#6BE3D7;"></span><span style="position:absolute;left:2%;top:-1px;font-size:8px;font-weight:700;color:#001F19;">Voz</span></div><div style="position:relative;height:10px;"><span style="position:absolute;left:18%;width:82%;top:0;bottom:0;border-radius:3px;background:#9DC1FF;outline:2px solid #F47B20;outline-offset:1px;"></span><span style="position:absolute;left:20%;top:-1px;font-size:8px;font-weight:700;color:#001F19;">Música</span></div><div style="position:relative;height:10px;"><span style="position:absolute;left:0%;width:100%;top:0;bottom:0;border-radius:3px;background:#5691FF;"></span><span style="position:absolute;left:2%;top:-1px;font-size:8px;font-weight:700;color:#001F19;">Ambiente</span></div></div></div><div style="display:flex;gap:8px;align-items:flex-start;"><b style="width:24px;height:24px;flex:none;border-radius:50%;background:#2F6FE0;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;font-size:13px;">7</b><div style="display:flex;flex-direction:column;gap:1px;"><b style="font-size:15px;">Baja la música</b><span style="font-size:14px;line-height:1.45;color:#34405A;">Toca los <b>3 puntitos (⋯)</b> del audio › <b>Volumen</b>. Voz 100, música ~20, ambiente ~15. <b>Optimización de voz</b> tiene corona: es Pro, no la uses.</span></div></div></div><div style="display:flex;flex-direction:column;gap:6px;"><div style="border:1px solid #C5D3EA;border-radius:10px;overflow:hidden;background:#FFFFFF;display:flex;flex-direction:column;height:118px;"><div style="display:flex;align-items:center;gap:6px;padding:3px 6px;background:linear-gradient(90deg,#00C4CC,#3B6FE0);color:#FFFFFF;font-size:8px;font-weight:700;"><span>⌂</span><span style="">Archivo</span></div><div style="display:flex;flex:1;min-height:0;overflow:hidden;"><div style="flex:1;min-width:0;background:#EEF1F6;display:flex;align-items:center;justify-content:center;padding:6px;min-height:0;overflow:hidden;"><div style="height:100%;max-width:100%;aspect-ratio:16/9;background:#FFFFFF;border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:9px;color:#6E7D96;">▶</div></div></div><div style="background:#FFFFFF;border-top:1px solid #DCE6F5;padding:5px 6px;display:flex;flex-direction:column;gap:3px;"><div style="display:flex;align-items:center;gap:4px;"><span style="font-size:9px;padding:1px 5px;border-radius:4px;background:#E1EEFF;outline:2px solid #F47B20;outline-offset:1px;">▶</span><span style="flex:1;height:2px;background:#DCE6F5;"></span></div><div style="position:relative;height:10px;"><span style="position:absolute;left:0%;width:70%;top:0;bottom:0;border-radius:3px;background:#6BE3D7;"></span><span style="position:absolute;left:2%;top:-1px;font-size:8px;font-weight:700;color:#001F19;">Voz</span></div><div style="position:relative;height:10px;"><span style="position:absolute;left:18%;width:82%;top:0;bottom:0;border-radius:3px;background:#9DC1FF;"></span><span style="position:absolute;left:20%;top:-1px;font-size:8px;font-weight:700;color:#001F19;">Música</span></div><div style="position:relative;height:10px;"><span style="position:absolute;left:0%;width:100%;top:0;bottom:0;border-radius:3px;background:#5691FF;"></span><span style="position:absolute;left:2%;top:-1px;font-size:8px;font-weight:700;color:#001F19;">Ambiente</span></div></div></div><div style="display:flex;gap:8px;align-items:flex-start;"><b style="width:24px;height:24px;flex:none;border-radius:50%;background:#2F6FE0;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;font-size:13px;">8</b><div style="display:flex;flex-direction:column;gap:1px;"><b style="font-size:15px;">Escucha todo</b><span style="font-size:14px;line-height:1.45;color:#34405A;">Toca ▶. Si no entiendes la voz, baja más la música.</span></div></div></div></div></div>
+            <div style="border:1px solid #CFE3FF;background:#F6F9FD;border-radius:16px;padding:14px 16px;display:flex;flex-direction:column;gap:6px;">
+              <b style="font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#1F4FB0;">¿Sin audífonos ni parlantes? Usa subtítulos</b>
+              <span style="font-size:15px;line-height:1.5;">Los subtítulos te muestran qué se dice y en qué momento, así puedes cortar y ubicar la música sin escuchar.</span>
+              <div style="display:flex;flex-direction:column;">
+                <div style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;align-items:start;padding:10px 0;border-top:1px solid #EAF0F8;"><b style="width:28px;height:28px;border-radius:50%;background:#2F6FE0;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;font-size:14px;">1</b><div style="display:flex;flex-direction:column;gap:2px;"><b style="font-size:15px;">Selecciona tu voz</b><span style="font-size:15px;line-height:1.5;color:#34405A;">Toca la barra de la voz en la línea de tiempo.</span></div></div>
+                <div style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;align-items:start;padding:10px 0;border-top:1px solid #EAF0F8;"><b style="width:28px;height:28px;border-radius:50%;background:#2F6FE0;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;font-size:14px;">2</b><div style="display:flex;flex-direction:column;gap:2px;"><b style="font-size:15px;">Genera los subtítulos</b><span style="font-size:15px;line-height:1.5;color:#34405A;">En la barra de arriba toca <b>Subtítulos</b> (o en el menú izquierdo: <b>Texto › Texto dinámico › Subtítulos</b>) y elige español. Si no aparece la opción, ve al paso 4.</span></div></div>
+                <div style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;align-items:start;padding:10px 0;border-top:1px solid #EAF0F8;"><b style="width:28px;height:28px;border-radius:50%;background:#2F6FE0;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;font-size:14px;">3</b><div style="display:flex;flex-direction:column;gap:2px;"><b style="font-size:15px;">Revisa el texto</b><span style="font-size:15px;line-height:1.5;color:#34405A;">La IA puede escribir mal un nombre o una palabra: corrígelo tocando el subtítulo.</span></div></div>
+                <div style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:10px;align-items:start;padding:10px 0;border-top:1px solid #EAF0F8;"><b style="width:28px;height:28px;border-radius:50%;background:#2F6FE0;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;font-size:14px;">4</b><div style="display:flex;flex-direction:column;gap:2px;"><b style="font-size:15px;">Sin la opción: hazlo a mano</b><span style="font-size:15px;line-height:1.5;color:#34405A;">Toca <b>Texto › Agregar caja de texto</b>, escribe la primera frase de tu guion y ajusta su barra en la línea de tiempo para que dure lo mismo que esa parte de la voz. Repite con cada frase.</span></div></div>
+              </div>
+              <span style="font-size:14px;line-height:1.45;color:#34405A;">Cuando consigas audífonos, escucha tu mezcla al menos una vez: los subtítulos no te dicen si la música tapa la voz.</span>
+            </div>
+            
+            <div style="background:#001F19;color:#FFFFFF;border-radius:20px;padding:clamp(16px,3vw,22px);display:flex;flex-direction:column;gap:14px;">
+              <div style="display:flex;flex-direction:column;gap:4px;"><b style="font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#6BE3D7;">Semáforo de escucha</b><span style="font-family:'Roca One Light',serif;font-size:clamp(20px,2.6vw,26px);line-height:1.2;">Escucha tu ensamble completo y marca cada punto</span><span style="font-size:15px;line-height:1.5;color:#B6E2FF;">Toca una vez para verde (bien) y otra para amarillo (mejorar).</span></div>
+              <div style="display:flex;flex-direction:column;gap:8px;"><sc-for list="{{ sem }}" as="s" hint-placeholder-count="5"><button type="button" onClick="{{ s.tap }}" aria-label="{{ s.aria }}" style="display:flex;align-items:center;gap:12px;text-align:left;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);color:#FFFFFF;border-radius:14px;padding:10px 14px;cursor:pointer;"><span style="display:flex;flex-direction:column;gap:4px;flex:none;background:#0B1714;border-radius:10px;padding:5px;"><span style="width:14px;height:14px;border-radius:50%;background:{{ s.g }};"></span><span style="width:14px;height:14px;border-radius:50%;background:{{ s.y }};"></span></span><span style="flex:1;font-size:15px;line-height:1.45;">{{ s.t }}</span><span style="flex:none;font-size:13px;font-weight:700;color:{{ s.lc }};">{{ s.l }}</span></button></sc-for></div>
+              <div style="background:#FFFFFF;color:#001F19;border-radius:16px;padding:14px 16px;display:flex;flex-direction:column;gap:10px;">
+                <b style="font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#1F4FB0;">Tus 3 mejoras para el Episodio 5</b>
+                <sc-if value="{{ hasMej }}"><div style="display:flex;flex-direction:column;gap:8px;"><sc-for list="{{ mej }}" as="m" hint-placeholder-count="3"><div style="display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.5;"><b style="width:24px;height:24px;flex:none;border-radius:50%;background:#FFC93C;color:#001F19;display:inline-flex;align-items:center;justify-content:center;font-size:13px;">{{ m.n }}</b><span>{{ m.t }}</span></div></sc-for></div></sc-if>
+                <sc-if value="{{ noMej }}"><span style="font-size:15px;line-height:1.5;color:#34405A;">{{ mejMsg }}</span></sc-if>
+                <div style="border:1px dashed #2F6FE0;background:#F6F9FD;border-radius:12px;padding:12px 14px;display:flex;gap:10px;align-items:flex-start;"><span style="font-size:20px;line-height:1;">✎</span><div style="display:flex;flex-direction:column;gap:2px;"><b style="font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#1F4FB0;">Copia en Borradores, en Mi bitácora</b><span style="font-size:15px;line-height:1.5;">Escribe tus 3 mejoras con tus palabras. En el Episodio 5 empiezas a editar desde ellas.</span></div></div>
+                <span style="font-size:13px;color:#4F5F7A;">Es para probar: no se guarda.</span>
+              </div>
+            </div>
+            
+            <div style="background:#001F19;color:#FFFFFF;border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:4px;"><span style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6BE3D7;">Guarda, no exportes</span><span style="font-size:15px;line-height:1.55;">Tu diseño queda editable en Canva con el nombre de tu historia. En el Episodio 5 lo terminas y lo exportas.</span></div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isPro }}">
+          <div role="group" aria-label="Pasos de la escena" style="display:flex;gap:8px;flex-wrap:wrap;"><sc-for list="{{ pkSteps }}" as="t" hint-placeholder-count="3"><sc-if value="{{ t.on }}"><button type="button" aria-current="step" onClick="{{ t.pick }}" style="flex:none;white-space:nowrap;display:flex;gap:8px;align-items:center;border:0;background:#001F19;color:#FFFFFF;font-weight:700;font-size:14px;padding:6px 14px 6px 6px;border-radius:999px;cursor:pointer;"><b style="width:26px;height:26px;border-radius:50%;background:#6BE3D7;color:#001F19;display:inline-flex;align-items:center;justify-content:center;font-size:13px;">{{ t.n }}</b>{{ t.t }}</button></sc-if><sc-if value="{{ t.off }}"><button type="button" onClick="{{ t.pick }}" style="flex:none;white-space:nowrap;display:flex;gap:8px;align-items:center;border:1px solid #DCE6F5;background:#FFFFFF;color:#001F19;font-weight:700;font-size:14px;padding:5px 14px 5px 5px;border-radius:999px;cursor:pointer;"><b style="width:26px;height:26px;border-radius:50%;background:#EAF2FF;color:#1F4FB0;display:inline-flex;align-items:center;justify-content:center;font-size:13px;">{{ t.mark }}</b>{{ t.t }}</button></sc-if></sc-for></div>
+          <sc-if value="{{ pk0 }}" hint-placeholder-val="{{ true }}"><div style="display:flex;flex-direction:column;gap:16px;animation:proIn .3s ease-out;"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;"><span style="font-size:17px;line-height:1.5;">Elige un estilo y toca las casillas para poner o quitar notas.</span><span style="align-self:flex-start;font-size:13px;font-weight:700;color:#8A5A00;background:#FFF6D9;border:1px solid #F2D27A;border-radius:999px;padding:4px 10px;">Es para probar: no se guarda</span></div><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:10px;"><sc-for list="{{ p4Pre }}" as="o" hint-placeholder-count="3"><sc-if value="{{ o.on }}"><button type="button" onClick="{{ o.pick }}" aria-pressed="true" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;text-align:left;border:2px solid #2F6FE0;background:#E1EEFF;border-radius:16px;padding:14px;cursor:pointer;color:#001F19;"><span style="font-size:24px;line-height:1;">{{ o.e }}</span><b style="font-size:16px;">{{ o.t }}</b><span style="font-size:14px;line-height:1.4;color:#34405A;">{{ o.d }}</span></button></sc-if><sc-if value="{{ o.off }}"><button type="button" onClick="{{ o.pick }}" aria-pressed="false" style="display:flex;flex-direction:column;align-items:flex-start;gap:6px;text-align:left;border:1px solid #DCE6F5;background:#FFFFFF;border-radius:16px;padding:14px;cursor:pointer;color:#001F19;"><span style="font-size:24px;line-height:1;">{{ o.e }}</span><b style="font-size:16px;">{{ o.t }}</b><span style="font-size:14px;line-height:1.4;color:#34405A;">{{ o.d }}</span></button></sc-if></sc-for></div><div style="background:#001F19;color:#FFFFFF;border-radius:22px;padding:18px;display:flex;flex-direction:column;gap:12px;"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;"><span style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6BE3D7;">Estudio · {{ p4Name }}</span><sc-if value="{{ p4OnSeq }}"><span aria-hidden="true" style="display:flex;gap:3px;align-items:flex-end;height:20px;"><span style="width:4px;height:20px;border-radius:2px;background:#6BE3D7;transform-origin:bottom;animation:eq .7s ease-in-out 0s infinite;"></span><span style="width:4px;height:20px;border-radius:2px;background:#6BE3D7;transform-origin:bottom;animation:eq .7s ease-in-out -0.3s infinite;"></span><span style="width:4px;height:20px;border-radius:2px;background:#6BE3D7;transform-origin:bottom;animation:eq .7s ease-in-out -0.6s infinite;"></span><span style="width:4px;height:20px;border-radius:2px;background:#6BE3D7;transform-origin:bottom;animation:eq .7s ease-in-out -0.15s infinite;"></span><span style="width:4px;height:20px;border-radius:2px;background:#6BE3D7;transform-origin:bottom;animation:eq .7s ease-in-out -0.45s infinite;"></span></span></sc-if></div><div style="display:flex;flex-direction:column;gap:6px;"><sc-for list="{{ p4Rows }}" as="row" hint-placeholder-count="3"><div style="display:grid;grid-template-columns:58px minmax(0,1fr);gap:8px;align-items:center;"><b style="font-size:13px;color:#B6E2FF;">{{ row.n }}</b><div style="display:flex;gap:4px;"><sc-for list="{{ row.cells }}" as="c" hint-placeholder-count="8"><button type="button" onClick="{{ c.tog }}" aria-label="{{ c.aria }}" style="flex:1;min-width:0;height:38px;border-radius:8px;border:0;background:{{ c.bg }};outline:{{ c.ol }};outline-offset:1px;cursor:pointer;padding:0;transition:background .15s ease-out;"></button></sc-for></div></div></sc-for></div><div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;"><button data-tap="1" type="button" onClick="{{ p4Play }}" style="border:0;background:#6BE3D7;color:#001F19;font-weight:700;font-size:15px;padding:10px 18px;border-radius:999px;cursor:pointer;">{{ p4PlayL }}</button><button type="button" onClick="{{ p4Clear }}" style="border:1px solid rgba(255,255,255,.35);background:transparent;color:#FFFFFF;font-weight:700;font-size:14px;padding:9px 14px;border-radius:999px;cursor:pointer;">Borrar todo</button><span style="font-size:13px;color:#B6E2FF;margin-left:auto;">{{ p4Count }}</span></div><span style="font-size:15px;line-height:1.5;">{{ p4Msg }}</span></div></div></sc-if><sc-if value="{{ pk1 }}"><div style="display:flex;flex-direction:column;gap:16px;animation:proIn .3s ease-out;"><span style="font-size:17px;line-height:1.5;">Escucha las dos. ¿Cuál tararearías mañana?</span><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:14px;"><div style="background:#FFFFFF;border:1px solid #DCE6F5;border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:12px;"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px;"><span style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#1F4FB0;">Cortina A</span><sc-if value="{{ p4OnA }}"><span style="display:flex;gap:3px;align-items:flex-end;height:20px;"><span style="width:4px;height:20px;border-radius:2px;background:#2F6FE0;transform-origin:bottom;animation:eq .7s ease-in-out 0s infinite;"></span><span style="width:4px;height:20px;border-radius:2px;background:#2F6FE0;transform-origin:bottom;animation:eq .7s ease-in-out -0.3s infinite;"></span><span style="width:4px;height:20px;border-radius:2px;background:#2F6FE0;transform-origin:bottom;animation:eq .7s ease-in-out -0.6s infinite;"></span><span style="width:4px;height:20px;border-radius:2px;background:#2F6FE0;transform-origin:bottom;animation:eq .7s ease-in-out -0.15s infinite;"></span><span style="width:4px;height:20px;border-radius:2px;background:#2F6FE0;transform-origin:bottom;animation:eq .7s ease-in-out -0.45s infinite;"></span></span></sc-if></div><div style="display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:3px;"><sc-for list="{{ p4MiniA }}" as="c" hint-placeholder-count="24"><span style="height:12px;border-radius:3px;background:{{ c.bg }};"></span></sc-for></div><b style="font-size:16px;">{{ p4DescA }}</b><div style="display:flex;gap:8px;flex-wrap:wrap;"><button type="button" onClick="{{ p4PlayA }}" style="border:0;background:#001F19;color:#FFFFFF;font-weight:700;font-size:15px;padding:10px 16px;border-radius:999px;cursor:pointer;">▶ Escuchar</button><sc-if value="{{ p4Ask }}" hint-placeholder-val="{{ true }}"><button data-tap="1" type="button" onClick="{{ p4VoteA }}" style="border:1px solid #2F6FE0;background:#FFFFFF;color:#1F4FB0;font-weight:700;font-size:15px;padding:9px 16px;border-radius:999px;cursor:pointer;">La recordaría</button></sc-if></div></div><div style="background:#FFFFFF;border:1px solid #DCE6F5;border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:12px;"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px;"><span style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#1F4FB0;">Cortina B</span><sc-if value="{{ p4OnB }}"><span style="display:flex;gap:3px;align-items:flex-end;height:20px;"><span style="width:4px;height:20px;border-radius:2px;background:#2F6FE0;transform-origin:bottom;animation:eq .7s ease-in-out 0s infinite;"></span><span style="width:4px;height:20px;border-radius:2px;background:#2F6FE0;transform-origin:bottom;animation:eq .7s ease-in-out -0.3s infinite;"></span><span style="width:4px;height:20px;border-radius:2px;background:#2F6FE0;transform-origin:bottom;animation:eq .7s ease-in-out -0.6s infinite;"></span><span style="width:4px;height:20px;border-radius:2px;background:#2F6FE0;transform-origin:bottom;animation:eq .7s ease-in-out -0.15s infinite;"></span><span style="width:4px;height:20px;border-radius:2px;background:#2F6FE0;transform-origin:bottom;animation:eq .7s ease-in-out -0.45s infinite;"></span></span></sc-if></div><div style="display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:3px;"><sc-for list="{{ p4MiniB }}" as="c" hint-placeholder-count="24"><span style="height:12px;border-radius:3px;background:{{ c.bg }};"></span></sc-for></div><b style="font-size:16px;">{{ p4DescB }}</b><div style="display:flex;gap:8px;flex-wrap:wrap;"><button type="button" onClick="{{ p4PlayB }}" style="border:0;background:#001F19;color:#FFFFFF;font-weight:700;font-size:15px;padding:10px 16px;border-radius:999px;cursor:pointer;">▶ Escuchar</button><sc-if value="{{ p4Ask }}" hint-placeholder-val="{{ true }}"><button data-tap="1" type="button" onClick="{{ p4VoteB }}" style="border:1px solid #2F6FE0;background:#FFFFFF;color:#1F4FB0;font-weight:700;font-size:15px;padding:9px 16px;border-radius:999px;cursor:pointer;">La recordaría</button></sc-if></div></div></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:10px;"><div style="background:#6BE3D7;border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:4px;"><span style="font-family:'Roca One Light',serif;font-size:34px;line-height:1;">1</span><b style="font-size:16px;">3 a 5 segundos</b><span style="font-size:14px;line-height:1.45;">Si es larga, la gente la salta.</span></div><div style="background:#B6E2FF;border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:4px;"><span style="font-family:'Roca One Light',serif;font-size:34px;line-height:1;">2</span><b style="font-size:16px;">Pocas notas</b><span style="font-size:14px;line-height:1.45;">Lo simple se recuerda.</span></div><div style="background:#D6ADFF;border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:4px;"><span style="font-family:'Roca One Light',serif;font-size:34px;line-height:1;">3</span><b style="font-size:16px;">Siempre igual</b><span style="font-size:14px;line-height:1.45;">Al inicio de cada capítulo.</span></div></div>
+<span style="font-size:15px;line-height:1.55;">{{ p4Val }}</span></div></sc-if><sc-if value="{{ pk2 }}"><div style="display:flex;flex-direction:column;gap:16px;animation:proIn .3s ease-out;"><span style="font-size:17px;line-height:1.5;">Ahora hazla de verdad. Elige una forma.</span><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:14px;"><button data-tap="1" type="button" onClick="{{ p4RouteA }}" style="display:flex;flex-direction:column;align-items:flex-start;gap:10px;text-align:left;border:1px solid #DCE6F5;background:#FFFFFF;border-radius:20px;padding:18px;cursor:pointer;color:#001F19;"><div style="display:flex;align-items:center;gap:10px;"><span style="width:44px;height:44px;border-radius:12px;background:#F2F6FC;display:flex;align-items:center;justify-content:center;"><img src="assets/logos/canva.png" alt="" style="width:26px;height:26px;object-fit:contain;"></span><span style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#1F4FB0;">Ruta A</span></div><b style="font-size:18px;">Con tu música, en Canva</b><span style="font-size:15px;line-height:1.5;color:#34405A;">Recortas de 3 a 5 segundos de tu música en Canva.</span><span style="font-size:14px;font-weight:700;color:#1F4FB0;">Ver los pasos →</span></button><button data-tap="1" type="button" onClick="{{ p4RouteB }}" style="display:flex;flex-direction:column;align-items:flex-start;gap:10px;text-align:left;border:1px solid #DCE6F5;background:#FFFFFF;border-radius:20px;padding:18px;cursor:pointer;color:#001F19;"><div style="display:flex;align-items:center;gap:10px;"><span style="width:44px;height:44px;border-radius:12px;background:#F2F6FC;display:flex;align-items:center;justify-content:center;"><img src="assets/logos/gemini.png" alt="" style="width:26px;height:26px;object-fit:contain;"></span><span style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#1F4FB0;">Ruta B</span></div><b style="font-size:18px;">Un efecto de la biblioteca o Gemini</b><span style="font-size:15px;line-height:1.5;color:#34405A;">Un efecto corto (una cuchara, un bus) de Mixkit o Pixabay, o créalo en Gemini relacionado con tu historia.</span><span style="font-size:14px;font-weight:700;color:#1F4FB0;">Ver los pasos →</span></button></div>
+<div style="background:#001F19;color:#FFFFFF;border-radius:16px;padding:14px 18px;display:flex;gap:14px;align-items:center;flex-wrap:wrap;"><span style="width:40px;height:40px;flex:none;border-radius:12px;background:#6BE3D7;color:#001F19;display:flex;align-items:center;justify-content:center;font-size:20px;">✎</span><div style="flex:1;min-width:200px;display:flex;flex-direction:column;gap:2px;"><span style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6BE3D7;">Va a tu carpeta</span><span style="font-size:15px;line-height:1.55;">Guarda tu cortina con el nombre <b>cortina</b> en tu carpeta. La pones al inicio de cada capítulo, siempre igual.</span></div></div></div></sc-if>
+          <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;border-top:1px solid #EAF0F8;padding-top:14px;"><sc-if value="{{ pkHasPrev }}"><button type="button" onClick="{{ pkPrev }}" style="border:1px solid #C5D3EA;background:#FFFFFF;color:#001F19;font-weight:700;font-size:15px;padding:10px 16px;border-radius:999px;cursor:pointer;">← Anterior</button></sc-if><span></span><sc-if value="{{ pkHasNext }}"><button data-tap="1" type="button" onClick="{{ pkNext }}" style="border:0;background:#2F6FE0;color:#FFFFFF;font-weight:700;font-size:15px;padding:11px 18px;border-radius:999px;cursor:pointer;">{{ pkNextL }}</button></sc-if></div>
+          
+        </sc-if>
+
+        <sc-if value="{{ hasLevels }}">
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <div style="background:#001F19;color:#FFFFFF;border-radius:16px;padding:16px 18px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;">
+              <div style="display:flex;flex-direction:column;gap:4px;flex:1;min-width:220px;">
+                <span style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6BE3D7;">Logro de la escena</span>
+                <span style="font-size:16px;line-height:1.5;">{{ goalD }}</span>
+              </div>
+              <sc-if value="{{ lvlNotDone }}"><button data-tap="1" type="button" onClick="{{ lvlToggle }}" style="border:0;background:#6BE3D7;color:#001F19;font-weight:700;font-size:15px;padding:10px 16px;border-radius:999px;cursor:pointer;white-space:nowrap;">✓ Lo logré</button></sc-if>
+              <sc-if value="{{ lvlIsDone }}"><button type="button" onClick="{{ lvlToggle }}" style="border:1px solid rgba(107,227,215,.5);background:transparent;color:#6BE3D7;font-weight:700;font-size:15px;padding:10px 16px;border-radius:999px;cursor:pointer;white-space:nowrap;">¡Logrado!</button></sc-if>
+            </div>
+            <div style="border:1px dashed #5691FF;border-radius:14px;overflow:hidden;">
+              <button type="button" onClick="{{ toggleExtra }}" style="width:100%;text-align:left;border:0;background:#FFFFFF;padding:13px 16px;font-size:15px;font-weight:700;color:#001F19;cursor:pointer;">⭐ Retos extra · opcional {{ extraArrow }}</button>
+              <sc-if value="{{ extra }}">
+                <div style="padding:0 16px 16px;display:flex;flex-direction:column;gap:10px;">
+                  <span style="font-size:15px;line-height:1.5;color:#34405A;">¿Terminaste antes? Elige uno.</span>
+                  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px;">
+                    <sc-for list="{{ extras }}" as="x" hint-placeholder-count="2">
+                      <div style="background:#F2F6FC;border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:4px;"><b style="font-size:15px;">{{ x.e }} {{ x.name }}</b><span style="font-size:15px;line-height:1.5;">{{ x.d }}</span></div>
+                    </sc-for>
+                  </div>
+                </div>
+              </sc-if>
+            </div>
+          </div>
+        </sc-if>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;">
+          <sc-if value="{{ hasBlock }}">
+            <div style="border:1px solid #DCE6F5;border-radius:14px;overflow:hidden;">
+              <button type="button" onClick="{{ toggleBlock }}" style="width:100%;text-align:left;border:0;background:#FFFFFF;padding:13px 16px;font-size:15px;font-weight:700;color:#001F19;cursor:pointer;">🧱 Si te bloqueas {{ blockArrow }}</button>
+              <sc-if value="{{ block }}"><div style="padding:0 16px 14px;font-size:15px;line-height:1.6;color:#34405A;">{{ blockTxt }}</div></sc-if>
+            </div>
+          </sc-if>
+          <sc-if value="{{ hasManual }}">
+            <div style="border:1px solid #DCE6F5;border-radius:14px;overflow:hidden;">
+              <button type="button" onClick="{{ toggleManual }}" style="width:100%;text-align:left;border:0;background:#FFFFFF;padding:13px 16px;font-size:15px;font-weight:700;color:#001F19;cursor:pointer;">📘 Paso a paso · {{ manualTitle }} {{ manualArrow }}</button>
+              <sc-if value="{{ manual }}"><ol style="margin:0;padding:0 16px 14px 34px;font-size:15px;line-height:1.7;color:#34405A;"><sc-for list="{{ manualItems }}" as="m" hint-placeholder-count="4"><li>{{ m }}</li></sc-for></ol><sc-if value="{{ hasLinks }}"><div style="display:flex;gap:8px;flex-wrap:wrap;padding:0 16px 16px;"><sc-for list="{{ links }}" as="l" hint-placeholder-count="2"><a href="{{ l.href }}" target="_blank" rel="noopener noreferrer" style="text-decoration:none;display:inline-flex;white-space:nowrap;flex:none;align-items:center;gap:6px;font-weight:700;font-size:15px;padding:10px 16px;border-radius:999px;background:#001F19;color:#FFFFFF;animation:ctcpulse 2.2s ease-out infinite;">{{ l.t }} ↗</a></sc-for></div></sc-if></sc-if>
+            </div>
+          </sc-if>
+        </div>
+
+        <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;">
+          <button type="button" onClick="{{ scPrev }}" style="border:1px solid #DCE6F5;background:#FFFFFF;color:#001F19;font-weight:700;font-size:15px;padding:12px 18px;border-radius:999px;cursor:pointer;white-space:nowrap;">← Escena anterior</button>
+          <button data-tap="1" type="button" onClick="{{ scNext }}" style="border:0;background:#2F6FE0;color:#FFFFFF;font-weight:700;font-size:15px;padding:12px 20px;border-radius:999px;cursor:pointer;">{{ scNextLabel }}</button>
+        </div>
+      </div>
+    </section>
+  </sc-if>
+
+  <sc-if value="{{ s4 }}">
+    <section data-screen-label="05 Comprueba" style="border-radius:24px;background:radial-gradient(60% 90% at 100% 0%,rgba(47,111,224,.5),transparent 60%),radial-gradient(50% 70% at 0% 100%,rgba(107,227,215,.22),transparent 62%),#001F19;color:#FFFFFF;padding:clamp(22px,4vw,40px);display:flex;flex-direction:column;gap:16px;">
+      <div style="display:flex;gap:4px;">
+        <sc-for list="{{ qBars }}" as="b" hint-placeholder-count="3">
+          <sc-if value="{{ b.on }}"><span style="flex:1;height:4px;border-radius:4px;background:#6BE3D7;"></span></sc-if>
+          <sc-if value="{{ b.off }}"><span style="flex:1;height:4px;border-radius:4px;background:rgba(255,255,255,.25);"></span></sc-if>
+        </sc-for>
+      </div>
+      <span style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6BE3D7;">Comprueba · {{ qN }} de 3</span>
+      <h2 style="font-family:'Roca One Light',serif;font-weight:300;font-size:clamp(24px,3.6vw,34px);line-height:1.15;margin:0;">{{ qQ }}</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;">
+        <sc-for list="{{ quiz }}" as="o" hint-placeholder-count="3">
+          <div style="display:flex;">
+            <sc-if value="{{ o.notPicked }}"><button type="button" onClick="{{ o.pick }}" style="flex:1;text-align:left;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.06);border-radius:16px;padding:16px;font-size:16px;line-height:1.45;color:#FFFFFF;cursor:pointer;">{{ o.t }}</button></sc-if>
+            <sc-if value="{{ o.picked }}">
+              <sc-if value="{{ o.ok }}"><div style="flex:1;background:#6BE3D7;color:#001F19;border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:6px;"><b style="font-size:16px;">✓ {{ o.t }}</b><span style="font-size:15px;line-height:1.5;">{{ o.fb }}</span></div></sc-if>
+              <sc-if value="{{ o.bad }}"><div style="flex:1;background:#FFFFFF;color:#001F19;border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:8px;"><b style="font-size:16px;">{{ o.t }}</b><span style="font-size:15px;line-height:1.5;">{{ o.fb }}</span><button type="button" onClick="{{ goEx }}" style="align-self:flex-start;border:1px solid #2F6FE0;background:#FFFFFF;color:#1F4FB0;font-weight:700;font-size:14px;padding:7px 12px;border-radius:999px;cursor:pointer;">Repasar: {{ exName }} →</button></div></sc-if>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+      <div style="display:flex;justify-content:flex-end;"><button data-tap="1" type="button" onClick="{{ qNext }}" style="border:0;background:#6BE3D7;color:#001F19;font-weight:700;font-size:15px;padding:12px 20px;border-radius:999px;cursor:pointer;">{{ qNextLabel }}</button></div>
+    </section>
+  </sc-if>
+
+  <sc-if value="{{ s5 }}">
+    <section data-screen-label="06 Cierre" style="display:flex;flex-wrap:wrap;gap:14px;align-items:flex-start;">
+      <div style="flex:1 1 100%;min-width:0;border-radius:24px;background:#FFFFFF;border:1px solid #DCE6F5;padding:clamp(22px,4vw,36px);display:flex;flex-direction:column;gap:14px;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:10px;flex-wrap:wrap;">
+          <div style="display:flex;flex-direction:column;gap:6px;"><span style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#1F4FB0;">Lo que te llevas</span><h2 style="font-family:'Roca One Light',serif;font-weight:300;font-size:clamp(26px,4vw,36px);line-height:1.08;margin:0;">Cierre: escucha de producción</h2></div>
+          <span style="font-family:'Roca One Light',serif;font-size:30px;color:#2F6FE0;">{{ nChk }}/{{ nTot }}</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;border-top:1px solid #EAF0F8;padding-top:14px;">
+          <b style="font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#1F4FB0;">Tu carpeta del estudio</b>
+          <span style="font-size:15px;line-height:1.5;">Toca cada archivo cuando lo tengas guardado.</span>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr));gap:8px;">
+            <sc-for list="{{ checks }}" as="c" hint-placeholder-count="4">
+              <sc-if value="{{ c.on }}"><button type="button" onClick="{{ c.toggle }}" aria-pressed="true" style="display:flex;flex-direction:column;align-items:center;gap:6px;border:0;background:#E1EEFF;border-radius:14px;padding:14px 10px;cursor:pointer;color:#001F19;"><span style="position:relative;font-size:28px;line-height:1;">{{ c.i }}<span style="position:absolute;right:-10px;bottom:-4px;width:20px;height:20px;border-radius:50%;background:#2F6FE0;color:#FFFFFF;font-size:12px;display:flex;align-items:center;justify-content:center;">✓</span></span><b style="font-size:14px;">{{ c.t }}</b><span style="font-size:12px;color:#1F4FB0;font-weight:700;">Guardado</span></button></sc-if>
+              <sc-if value="{{ c.off }}"><button type="button" onClick="{{ c.toggle }}" aria-pressed="false" style="display:flex;flex-direction:column;align-items:center;gap:6px;border:1px dashed #C5D3EA;background:#FFFFFF;border-radius:14px;padding:14px 10px;cursor:pointer;color:#001F19;"><span style="font-size:28px;line-height:1;opacity:.45;">{{ c.i }}</span><b style="font-size:14px;">{{ c.t }}</b><span style="font-size:12px;color:#6E7D96;">Toca al guardar</span></button></sc-if>
+            </sc-for>
+          </div>
+        </div>
+        <sc-if value="{{ allChk }}"><div style="background:#001F19;color:#FFFFFF;border-radius:12px;padding:14px 16px;font-size:16px;line-height:1.5;">Listo. Tu capítulo 1 ya suena. En el Episodio 5 lo editas y lo exportas.</div></sc-if>
+      </div>
+      <div role="group" aria-label="Tu ruta: episodio 4 de 10" style="flex:1 1 100%;min-width:0;background:#001F19;color:#FFFFFF;border-radius:24px;padding:clamp(18px,3vw,28px);display:flex;flex-direction:column;gap:18px;box-sizing:border-box;"><div style="display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;"><div style="display:flex;flex-direction:column;gap:4px;"><span style="font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#6BE3D7;">Tu ruta · 10 episodios</span><span style="font-family:'Roca One Light',serif;font-size:clamp(20px,2.6vw,26px);line-height:1.2;">Sigue: Episodio 5 · Edición: tu capítulo 1</span><span style="font-size:15px;line-height:1.5;color:#CFE3FF;max-width:640px;">Valentina le mostró su capítulo 1 a su prima en el celular. Su prima no entendió el adelanto. ¿Qué se arregla en la edición?</span></div><div style="display:flex;align-items:baseline;gap:6px;"><span style="font-family:'Roca One Light',serif;font-size:46px;line-height:1;color:#6BE3D7;">4</span><span style="font-size:15px;color:#B6E2FF;">de 10</span></div></div><div style="overflow-x:auto;margin:0 -6px;padding:0 6px 6px;"><div style="display:flex;min-width:720px;"><div style="flex:1 1 0px;min-width:72px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;animation:routeIn .4s ease-out 0.00s both;"><div style="position:relative;width:100%;height:52px;display:flex;align-items:center;justify-content:center;"><span style="position:absolute;left:0;right:50%;top:50%;height:3px;margin-top:-1.5px;background:transparent;"></span><span style="position:absolute;left:50%;right:0;top:50%;height:3px;margin-top:-1.5px;background:#6BE3D7;"></span><span style="position:relative;width:42px;height:42px;border-radius:50%;background:#6BE3D7;border:2px solid #6BE3D7;display:flex;align-items:center;justify-content:center;font-size:19px;box-sizing:border-box;"><b style="color:#001F19;font-size:18px;">✓</b></span></div><span style="font-size:12px;font-weight:700;letter-spacing:.06em;color:#6BE3D7;">EP. 1</span><span style="font-size:12px;line-height:1.3;font-weight:700;color:#FFFFFF;padding:0 4px;">Lo que el feed no muestra</span></div><div style="flex:1 1 0px;min-width:72px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;animation:routeIn .4s ease-out 0.05s both;"><div style="position:relative;width:100%;height:52px;display:flex;align-items:center;justify-content:center;"><span style="position:absolute;left:0;right:50%;top:50%;height:3px;margin-top:-1.5px;background:#6BE3D7;"></span><span style="position:absolute;left:50%;right:0;top:50%;height:3px;margin-top:-1.5px;background:#6BE3D7;"></span><span style="position:relative;width:42px;height:42px;border-radius:50%;background:#6BE3D7;border:2px solid #6BE3D7;display:flex;align-items:center;justify-content:center;font-size:19px;box-sizing:border-box;"><b style="color:#001F19;font-size:18px;">✓</b></span></div><span style="font-size:12px;font-weight:700;letter-spacing:.06em;color:#6BE3D7;">EP. 2</span><span style="font-size:12px;line-height:1.3;font-weight:700;color:#FFFFFF;padding:0 4px;">La historia y su nombre</span></div><div style="flex:1 1 0px;min-width:72px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;animation:routeIn .4s ease-out 0.10s both;"><div style="position:relative;width:100%;height:52px;display:flex;align-items:center;justify-content:center;"><span style="position:absolute;left:0;right:50%;top:50%;height:3px;margin-top:-1.5px;background:#6BE3D7;"></span><span style="position:absolute;left:50%;right:0;top:50%;height:3px;margin-top:-1.5px;background:#6BE3D7;"></span><span style="position:relative;width:42px;height:42px;border-radius:50%;background:#6BE3D7;border:2px solid #6BE3D7;display:flex;align-items:center;justify-content:center;font-size:19px;box-sizing:border-box;"><b style="color:#001F19;font-size:18px;">✓</b></span></div><span style="font-size:12px;font-weight:700;letter-spacing:.06em;color:#6BE3D7;">EP. 3</span><span style="font-size:12px;line-height:1.3;font-weight:700;color:#FFFFFF;padding:0 4px;">Cómo suena una historia</span></div><div style="flex:1 1 0px;min-width:72px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;animation:routeIn .4s ease-out 0.15s both;"><div style="position:relative;width:100%;height:52px;display:flex;align-items:center;justify-content:center;"><span style="position:absolute;left:0;right:50%;top:50%;height:3px;margin-top:-1.5px;background:#6BE3D7;"></span><span style="position:absolute;left:50%;right:0;top:50%;height:3px;margin-top:-1.5px;background:rgba(255,255,255,.18);"></span><span style="position:relative;width:52px;height:52px;border-radius:50%;background:#2F6FE0;border:2px solid #FFFFFF;animation:routePulse 1.8s ease-out infinite;display:flex;align-items:center;justify-content:center;font-size:24px;box-sizing:border-box;"><span style="">🎙️</span></span></div><span style="font-size:12px;font-weight:700;letter-spacing:.06em;color:#FFFFFF;">HOY · EP. 4</span><span style="font-size:12px;line-height:1.3;font-weight:700;color:#FFFFFF;padding:0 4px;">Estudio de grabación</span></div><div style="flex:1 1 0px;min-width:72px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;animation:routeIn .4s ease-out 0.20s both;"><div style="position:relative;width:100%;height:52px;display:flex;align-items:center;justify-content:center;"><span style="position:absolute;left:0;right:50%;top:50%;height:3px;margin-top:-1.5px;background:rgba(255,255,255,.18);"></span><span style="position:absolute;left:50%;right:0;top:50%;height:3px;margin-top:-1.5px;background:rgba(255,255,255,.18);"></span><span style="position:relative;width:42px;height:42px;border-radius:50%;background:#0B2A24;border:2px dashed rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center;font-size:19px;box-sizing:border-box;"><span style="opacity:.6;">🎧</span></span></div><span style="font-size:12px;font-weight:700;letter-spacing:.06em;color:#9FB0AA;">EP. 5</span><span style="font-size:12px;line-height:1.3;font-weight:700;color:#B6C4BF;padding:0 4px;">Edición: tu capítulo 1</span></div><div style="flex:1 1 0px;min-width:72px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;animation:routeIn .4s ease-out 0.25s both;"><div style="position:relative;width:100%;height:52px;display:flex;align-items:center;justify-content:center;"><span style="position:absolute;left:0;right:50%;top:50%;height:3px;margin-top:-1.5px;background:rgba(255,255,255,.18);"></span><span style="position:absolute;left:50%;right:0;top:50%;height:3px;margin-top:-1.5px;background:rgba(255,255,255,.18);"></span><span style="position:relative;width:42px;height:42px;border-radius:50%;background:#0B2A24;border:2px dashed rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center;font-size:19px;box-sizing:border-box;"><span style="opacity:.6;">🎤</span></span></div><span style="font-size:12px;font-weight:700;letter-spacing:.06em;color:#9FB0AA;">EP. 6</span><span style="font-size:12px;line-height:1.3;font-weight:700;color:#B6C4BF;padding:0 4px;">Tu capítulo 2</span></div><div style="flex:1 1 0px;min-width:72px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;animation:routeIn .4s ease-out 0.30s both;"><div style="position:relative;width:100%;height:52px;display:flex;align-items:center;justify-content:center;"><span style="position:absolute;left:0;right:50%;top:50%;height:3px;margin-top:-1.5px;background:rgba(255,255,255,.18);"></span><span style="position:absolute;left:50%;right:0;top:50%;height:3px;margin-top:-1.5px;background:rgba(255,255,255,.18);"></span><span style="position:relative;width:42px;height:42px;border-radius:50%;background:#0B2A24;border:2px dashed rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center;font-size:19px;box-sizing:border-box;"><span style="opacity:.6;">🎨</span></span></div><span style="font-size:12px;font-weight:700;letter-spacing:.06em;color:#9FB0AA;">EP. 7</span><span style="font-size:12px;line-height:1.3;font-weight:700;color:#B6C4BF;padding:0 4px;">La cara de tu historia</span></div><div style="flex:1 1 0px;min-width:72px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;animation:routeIn .4s ease-out 0.35s both;"><div style="position:relative;width:100%;height:52px;display:flex;align-items:center;justify-content:center;"><span style="position:absolute;left:0;right:50%;top:50%;height:3px;margin-top:-1.5px;background:rgba(255,255,255,.18);"></span><span style="position:absolute;left:50%;right:0;top:50%;height:3px;margin-top:-1.5px;background:rgba(255,255,255,.18);"></span><span style="position:relative;width:42px;height:42px;border-radius:50%;background:#0B2A24;border:2px dashed rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center;font-size:19px;box-sizing:border-box;"><span style="opacity:.6;">📣</span></span></div><span style="font-size:12px;font-weight:700;letter-spacing:.06em;color:#9FB0AA;">EP. 8</span><span style="font-size:12px;line-height:1.3;font-weight:700;color:#B6C4BF;padding:0 4px;">Tráiler</span></div><div style="flex:1 1 0px;min-width:72px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;animation:routeIn .4s ease-out 0.40s both;"><div style="position:relative;width:100%;height:52px;display:flex;align-items:center;justify-content:center;"><span style="position:absolute;left:0;right:50%;top:50%;height:3px;margin-top:-1.5px;background:rgba(255,255,255,.18);"></span><span style="position:absolute;left:50%;right:0;top:50%;height:3px;margin-top:-1.5px;background:rgba(255,255,255,.18);"></span><span style="position:relative;width:42px;height:42px;border-radius:50%;background:#0B2A24;border:2px dashed rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center;font-size:19px;box-sizing:border-box;"><span style="opacity:.6;">🚀</span></span></div><span style="font-size:12px;font-weight:700;letter-spacing:.06em;color:#9FB0AA;">EP. 9</span><span style="font-size:12px;line-height:1.3;font-weight:700;color:#B6C4BF;padding:0 4px;">Al aire</span></div><div style="flex:1 1 0px;min-width:72px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;animation:routeIn .4s ease-out 0.45s both;"><div style="position:relative;width:100%;height:52px;display:flex;align-items:center;justify-content:center;"><span style="position:absolute;left:0;right:50%;top:50%;height:3px;margin-top:-1.5px;background:rgba(255,255,255,.18);"></span><span style="position:absolute;left:50%;right:0;top:50%;height:3px;margin-top:-1.5px;background:transparent;"></span><span style="position:relative;width:42px;height:42px;border-radius:50%;background:#0B2A24;border:2px dashed rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center;font-size:19px;box-sizing:border-box;"><span style="opacity:.6;">🏆</span></span></div><span style="font-size:12px;font-weight:700;letter-spacing:.06em;color:#9FB0AA;">EP. 10</span><span style="font-size:12px;line-height:1.3;font-weight:700;color:#B6C4BF;padding:0 4px;">Estreno</span></div></div></div></div>
+    </section>
+  </sc-if>
+  <sc-if value="{{ popOn }}"><div role="dialog" aria-modal="true" aria-label="{{ popT }}" style="position:fixed;inset:0;z-index:90;background:rgba(8,11,9,.5);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);display:flex;align-items:center;justify-content:center;padding:20px;animation:scrim .2s ease-out;"><div style="width:min(100%,480px);max-height:calc(100vh - 40px);overflow:auto;background:#FFFFFF;border-radius:24px;box-shadow:0 20px 60px rgba(0,31,25,.35);animation:popIn .25s ease-out;display:flex;flex-direction:column;"><div style="background:{{ popBg }};padding:20px 22px;display:flex;gap:14px;align-items:center;"><span style="width:50px;height:50px;flex:none;border-radius:50%;background:#FFFFFF;color:#001F19;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;">{{ popE }}</span><b style="font-family:'Roca One Light',serif;font-weight:300;font-size:clamp(22px,3vw,26px);line-height:1.15;color:#001F19;">{{ popT }}</b></div><div style="padding:18px 22px 22px;display:flex;flex-direction:column;gap:14px;"><span style="font-size:16px;line-height:1.55;color:#001F19;">{{ popW }}</span><sc-if value="{{ popHasL }}"><div style="display:flex;flex-direction:column;gap:8px;"><sc-for list="{{ popL }}" as="x" hint-placeholder-count="3"><div style="display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.5;color:#001F19;"><b style="width:26px;height:26px;flex:none;border-radius:50%;background:#2F6FE0;color:#FFFFFF;display:inline-flex;align-items:center;justify-content:center;font-size:13px;">{{ x.n }}</b><span>{{ x.t }}</span></div></sc-for></div></sc-if><button data-tap="1" type="button" onClick="{{ popAct }}" style="align-self:flex-end;border:0;background:#001F19;color:#FFFFFF;font-weight:700;font-size:15px;padding:11px 20px;border-radius:999px;cursor:pointer;">{{ popBtnL }}</button></div></div></div></sc-if>
+  <sc-if value="{{ showIdxBtn }}">
+    <div data-idxwrap="1" style="position:fixed;right:16px;bottom:16px;z-index:45;display:flex;flex-direction:column;align-items:flex-end;gap:10px;">
+      <sc-if value="{{ idxOpen }}">
+        <div data-anim="idxpanel" style="background:#FFFFFF;border:1px solid #DCE6F5;border-radius:18px;box-shadow:0 16px 40px rgba(0,31,25,.22);padding:8px;display:flex;flex-direction:column;gap:2px;min-width:220px;">
+          <sc-for list="{{ idx }}" as="it" hint-placeholder-count="6">
+            <button type="button" onClick="{{ it.goIdx }}" style="display:flex;align-items:center;gap:10px;border:0;background:{{ it.bg }};border-radius:12px;padding:9px 12px;font-size:15px;font-weight:700;color:#001F19;cursor:pointer;text-align:left;"><span style="width:28px;height:28px;flex:none;border-radius:50%;background:{{ it.dot }};display:inline-flex;align-items:center;justify-content:center;font-size:14px;">{{ it.mark }}</span>{{ it.t }}</button>
+          </sc-for>
+        </div>
+      </sc-if>
+      <button type="button" data-anim="idxbtn" onClick="{{ toggleIdx }}" aria-expanded="{{ idxOpen }}" style="display:inline-flex;align-items:center;gap:8px;border:0;background:#001F19;color:#FFFFFF;font-weight:700;font-size:15px;padding:12px 18px;border-radius:999px;cursor:pointer;box-shadow:0 10px 28px rgba(0,31,25,.3);"><span style="width:8px;height:8px;border-radius:50%;background:#6BE3D7;"></span>{{ idxLabel }}</button>
+    </div>
+  </sc-if>
+  <div role="status" aria-live="polite" style="position:fixed;left:50%;top:16px;transform:translateX(-50%);z-index:50;width:max-content;max-width:min(380px,calc(100vw - 32px));pointer-events:none;">
+    <sc-if value="{{ hasToast }}"><div data-anim="toast" style="background:#001F19;color:#FFFFFF;border-radius:16px;padding:12px 16px 12px 12px;display:flex;gap:12px;align-items:center;box-shadow:0 14px 36px rgba(0,31,25,.32);border:1px solid rgba(107,227,215,.35);"><span style="width:42px;height:42px;flex:none;border-radius:12px;background:#6BE3D7;color:#001F19;display:flex;align-items:center;justify-content:center;font-size:20px;">{{ toastE }}</span><div style="display:flex;flex-direction:column;gap:2px;min-width:0;"><b style="font-size:15px;">{{ toastT }}</b><span style="font-size:14px;line-height:1.4;color:#B6E2FF;">{{ toastS }}</span></div></div></sc-if>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;ttsPermitido&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Herramientas&quot;},&quot;demoMusicaIA&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Herramientas&quot;}}">
+class Component extends DCLogic {
+  state = { zoom: 2, menuOut: false, idxOpen: false, mute: false, toast: null, s: 0, sc: 0, chk: {}, lvDone: {}, extra: false, manual: false, block: false, oculta: false, q: 0, qp: {}, playing: null, miss: {}, vPick: null, route: null, mus: 0, feel: {}, pb: {}, amb: { calle: false, bus: false, olla: false }, mix: { voz: 60, mus: 80, amb: 70 }, lst: {} };
+  componentWillUnmount() { document.removeEventListener('fullscreenchange', this.onFs); document.removeEventListener('webkitfullscreenchange', this.onFs); window.removeEventListener('scroll', this.onIdxPl); window.removeEventListener('resize', this.onIdxPl); window.removeEventListener('scroll', this.onScr); clearTimeout(this.tT); document.body.style.zoom = ''; this.stopAll(true); }
+  reduce() { try { return window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) { return false; } }
+  sfx(k) {
+    if (this.state.mute) return;
+    try {
+      const C = this.ac || (this.ac = new (window.AudioContext || window.webkitAudioContext)());
+      if (C.state === 'suspended' && C.resume) C.resume();
+      const t = C.currentTime;
+      const tone = (f, d, s, type, v) => { const o = C.createOscillator(), g = C.createGain(); o.type = type || 'sine'; o.frequency.setValueAtTime(f, t + s); g.gain.setValueAtTime(0.0001, t + s); g.gain.linearRampToValueAtTime(v || 0.05, t + s + 0.012); g.gain.exponentialRampToValueAtTime(0.0001, t + s + d); o.connect(g); g.connect(C.destination); o.start(t + s); o.stop(t + s + d + 0.03); };
+      if (k === 'ok') { tone(660, 0.16, 0, 'sine', 0.05); tone(990, 0.24, 0.08, 'sine', 0.045); }
+      else if (k === 'no') { tone(240, 0.2, 0, 'triangle', 0.045); tone(180, 0.22, 0.07, 'triangle', 0.035); }
+      else if (k === 'pop') tone(880, 0.07, 0, 'sine', 0.04);
+      else if (k === 'go') { tone(520, 0.1, 0, 'sine', 0.03); tone(780, 0.12, 0.05, 'sine', 0.025); }
+      else if (k === 'win') [523, 659, 784, 1047].forEach((f, i) => tone(f, 0.26, i * 0.08, 'sine', 0.045));
+    } catch (e) {}
+  }
+  toast(t, s, e) { clearTimeout(this.tT); this.setState({ toast: { t, s, e: e || '✓', id: Date.now() } }); this.tT = setTimeout(() => this.setState({ toast: null }), 3600); }
+  burst(e, n) {
+    if (this.reduce()) return; const el = e && e.currentTarget; let x = innerWidth / 2, y = innerHeight / 2; if (el && el.getBoundingClientRect) { const r = el.getBoundingClientRect(); x = r.left + r.width / 2; y = r.top + r.height / 2; }
+    const cols = ['#6BE3D7', '#2F6FE0', '#B6E2FF', '#001F19'];
+    for (let i = 0; i < (n || 16); i++) { const d = document.createElement('span'); const s = 6 + Math.random() * 6; d.style.cssText = 'position:fixed;left:' + x + 'px;top:' + y + 'px;width:' + s + 'px;height:' + s + 'px;border-radius:' + (i % 2 ? '50%' : '2px') + ';background:' + cols[i % 4] + ';pointer-events:none;z-index:60;'; document.body.appendChild(d); const a = Math.random() * Math.PI * 2, r = 50 + Math.random() * 80; const an = d.animate([{ transform: 'translate(-50%,-50%)', opacity: 1 }, { transform: 'translate(calc(-50% + ' + Math.cos(a) * r + 'px), calc(-50% + ' + (Math.sin(a) * r + 40) + 'px)) scale(.5)', opacity: 0 }], { duration: 800, easing: 'cubic-bezier(.2,.7,.2,1)' }); an.onfinish = () => d.remove(); }
+  }
+  componentDidMount() {
+    this.prevSt = this.state;
+    this.onScr = () => { const m = document.querySelector('[data-menu="1"]'); if (!m) return; const out = m.getBoundingClientRect().bottom < 0; if (out !== this.state.menuOut) this.setState(out ? { menuOut: true } : { menuOut: false, idxOpen: false }); };
+    window.addEventListener('scroll', this.onScr, { passive: true });
+    this.onFs = () => this.setState({ full: !!(document.fullscreenElement || document.webkitFullscreenElement) });
+    document.addEventListener('fullscreenchange', this.onFs); document.addEventListener('webkitfullscreenchange', this.onFs);
+    this.onIdxPl = () => { if (this.state.menuOut) { cancelAnimationFrame(this.ipR); this.ipR = requestAnimationFrame(() => this.idxPlace()); } };
+    window.addEventListener('scroll', this.onIdxPl, { passive: true }); window.addEventListener('resize', this.onIdxPl);
+  }
+  componentDidUpdate() {
+    if (this.state.menuOut) requestAnimationFrame(() => this.idxPlace());
+    this.ambUpdate();
+    const st = this.state; const p = this.prevSt || st; this.prevSt = st; if (p === st) return;
+    if (p.zoom !== st.zoom) document.body.style.zoom = (st.zoom ?? 2) === 2 ? '' : String([0.8, 0.9, 1, 1.1, 1.25, 1.4][st.zoom]);
+    if (this.reduce()) return;
+    const stag = (el, dx) => { if (!el || !el.animate) return; el.animate([{ opacity: 0, transform: 'translate(' + dx + 'px,10px)' }, { opacity: 1, transform: 'none' }], { duration: 320, easing: 'cubic-bezier(.2,.7,.2,1)' }); Array.from(el.children).slice(0, 10).forEach((c, i) => c.animate && c.animate([{ opacity: 0, transform: 'translateY(14px)' }, { opacity: 1, transform: 'none' }], { duration: 420, delay: 80 + i * 60, easing: 'cubic-bezier(.2,.7,.2,1)', fill: 'backwards' })); };
+    if (p.s !== st.s) stag(document.querySelector('section[data-screen-label]'), 0);
+    else if (p.sc !== st.sc) stag(document.querySelector('[data-anim="scene"]'), 16);
+    const q = s => document.querySelector(s);
+    if (p.menuOut !== st.menuOut && st.menuOut) { const b = q('[data-anim="idxbtn"]'); if (b && b.animate) b.animate([{ opacity: 0, transform: 'translateY(16px) scale(.9)' }, { opacity: 1, transform: 'none' }], { duration: 300, easing: 'cubic-bezier(.2,.9,.3,1.2)' }); }
+    if (p.idxOpen !== st.idxOpen && st.idxOpen) { const b = q('[data-anim="idxpanel"]'); if (b && b.animate) b.animate([{ opacity: 0, transform: 'translateY(10px)' }, { opacity: 1, transform: 'none' }], { duration: 240, easing: 'ease-out' }); }
+    if ((p.vstep !== st.vstep || p.vtool !== st.vtool)) { const m = q('[data-anim="vmock"]'); if (m && m.animate) m.animate([{ opacity: .3, transform: 'translateY(6px)' }, { opacity: 1, transform: 'none' }], { duration: 260, easing: 'ease-out' }); }
+    if (p.toast !== st.toast && st.toast) { const t = q('[data-anim="toast"]'); if (t && t.animate) t.animate([{ opacity: 0, transform: 'translateY(-24px) scale(.96)' }, { opacity: 1, transform: 'none' }], { duration: 360, easing: 'cubic-bezier(.2,.9,.3,1.2)' }); }
+  }
+  infraVals() {
+    const st = this.state, z = st.zoom ?? 2;
+    return {
+      showIdxBtn: !!st.menuOut, idxOpen: !!st.idxOpen, idxLabel: st.idxOpen ? '✕ Cerrar' : 'Índice', toggleIdx: () => this.setState(s => ({ idxOpen: !s.idxOpen })),
+      mute: !!st.mute, muteLabel: st.mute ? '🔇 Sonido' : '🔊 Sonido', toggleMute: () => this.setState(s => ({ mute: !s.mute })),
+      hasToast: !!st.toast, toastT: st.toast ? st.toast.t : '', toastS: st.toast ? st.toast.s : '', toastE: st.toast ? st.toast.e : '',
+      zoomTxt: [80, 90, 100, 110, 125, 140][z] + '%', zoomIn: () => this.setState(s => ({ zoom: Math.min(5, (s.zoom ?? 2) + 1) })), zoomOut: () => this.setState(s => ({ zoom: Math.max(0, (s.zoom ?? 2) - 1) })), zoomReset: () => this.setState({ zoom: 2 }),
+    };
+  }
+  idxPlace() {
+    const w = document.querySelector('[data-idxwrap="1"]'); if (!w) return;
+    const busy = (x, y) => { const els = document.elementsFromPoint(x, y).filter(e => !w.contains(e)); const e = els[0]; if (!e || e === document.body || e === document.documentElement) return false; if (/^(IMG|BUTTON|A|INPUT|TEXTAREA|VIDEO|IMAGE-SLOT|LABEL|SPAN|B|P|H1|H2|H3|LI)$/.test(e.tagName)) return true; return Array.from(e.childNodes).some(n => n.nodeType === 3 && n.textContent.trim()); };
+    const H = innerHeight, Wd = innerWidth, ys = [H - 22, H - 40, H - 58];
+    const side = (xs) => xs.some(x => ys.some(y => busy(x, y)));
+    const rBusy = side([Wd - 30, Wd - 80, Wd - 130]);
+    const lBusy = side([30, 80, 130]);
+    const left = rBusy && !lBusy;
+    w.style.right = left ? 'auto' : '16px'; w.style.left = left ? '16px' : 'auto'; w.style.alignItems = left ? 'flex-start' : 'flex-end';
+  }
+  top() { try { window.scrollTo(0, 0); } catch (e) {} }
+  A(key) {
+    this.au = this.au || {};
+    if (!this.au[key]) {
+      const a = new Audio('assets/e4/' + key + (key === 'amb-calle' ? '.wav' : '.mp3'));
+      a.preload = 'none';
+      a.onerror = () => this.setState(s => ({ miss: { ...s.miss, [key]: true } }));
+      this.au[key] = a;
+    }
+    return this.au[key];
+  }
+  stopAll(silent) {
+    Object.values(this.au || {}).forEach(a => { try { a.pause(); a.currentTime = 0; a.onended = null; } catch (e) {} });
+    if (!silent) this.setState({ playing: null });
+  }
+  playSet(id, items) {
+    if (this.state.playing === id) { this.stopAll(); return; }
+    this.stopAll(true);
+    items.forEach((it, i) => {
+      const a = this.A(it.k); a.loop = !!it.loop; a.volume = it.v == null ? 1 : it.v;
+      try { a.currentTime = 0; } catch (e) {}
+      a.play().catch(() => {});
+      if (i === 0) a.onended = () => { if (this.state.playing === id) this.stopAll(); };
+    });
+    this.setState({ playing: id });
+  }
+  ambUpdate() {
+    const s = this.state;
+    if (s.playing === 'amb') {
+      ['calle', 'bus', 'olla'].forEach(k => { const a = this.A('amb-' + k); if (s.amb[k]) { a.loop = true; a.volume = 0.55; if (a.paused) a.play().catch(() => {}); } else if (!a.paused) a.pause(); });
+    }
+    if (s.playing === 'mix') {
+      this.A('narracion').volume = s.mix.voz / 100; this.A('musica-b').volume = s.mix.mus / 100; this.A('amb-calle').volume = s.mix.amb / 100;
+    }
+  }
+  go(i) { if (i !== this.state.s) this.sfx('go'); this.stopAll(); this.top(); this.setState({ s: i, ts: 0, block: false, manual: false, idxOpen: false }); }
+  goSc(i) { this.sfx('go'); this.stopAll(); this.top(); this.setState({ s: 3, sc: i, block: false, manual: false, extra: false }); }
+  P4 = [['Cálida', [523.25, 392, 261.63], 'triangle', 0.2, [1,0,0,0,0,0,0,0, 0,0,1,0,1,0,0,0, 1,0,0,0,0,0,1,0], '🌅', 'Notas suaves, como una guitarra.'], ['Misteriosa', [466.16, 349.23, 233.08], 'sine', 0.26, [0,0,0,1,0,0,0,0, 0,1,0,0,0,0,1,0, 1,0,0,0,1,0,0,0], '🌙', 'Notas largas y graves.'], ['Alegre', [659.25, 523.25, 392], 'square', 0.15, [1,0,1,0,0,0,1,0, 0,1,0,0,1,0,0,0, 1,0,0,0,1,0,0,1], '☀️', 'Notas rápidas y brillantes.']];
+  P4BUSY = [1,1,0,1,1,0,1,1, 1,0,1,1,0,1,1,0, 1,1,1,0,1,1,0,1];
+  p4Play(gridIn, piIn, key) {
+    if (this.state.p4k) return;
+    let Cx; try { Cx = this.ac || (this.ac = new (window.AudioContext || window.webkitAudioContext)()); if (Cx.state === 'suspended' && Cx.resume) Cx.resume(); } catch (e) { return; }
+    const P = this.P4[piIn], grid = gridIn, dt = P[3], t0 = Cx.currentTime + 0.05;
+    for (let rep = 0; rep < 2; rep++) for (let c = 0; c < 8; c++) for (let r = 0; r < 3; r++) if (grid[r * 8 + c]) { const t = t0 + (rep * 8 + c) * dt, o = Cx.createOscillator(), g = Cx.createGain(); o.type = P[2]; o.frequency.value = P[1][r]; g.gain.setValueAtTime(0.0001, t); g.gain.linearRampToValueAtTime(P[2] === 'square' ? 0.035 : 0.08, t + 0.015); g.gain.exponentialRampToValueAtTime(0.0001, t + dt * 1.8); o.connect(g); g.connect(Cx.destination); o.start(t); o.stop(t + dt * 2); }
+    let k = 0; this.setState({ p4s: 0, p4k: key }); clearInterval(this.p4I);
+    this.p4I = setInterval(() => { k++; if (k >= 16) { clearInterval(this.p4I); this.setState({ p4s: -1, p4k: null }); return; } this.setState({ p4s: k % 8 }); }, dt * 1000);
+  }
+  proVals() {
+    const st = this.state, sf = k => { try { this.sfx(k); } catch (e) {} }, set = o => this.setState(o);
+    const prk = st.prk || 0, S = ["Compón","Escucha y compara","Créala de verdad"], goK = i => { sf('go'); set({ prk: i, ppop: null }); }, pp = st.ppop;
+    const openPop = (o, e) => { sf(o.ok === true ? 'ok' : o.ok === false ? 'no' : 'pop'); if (o.ok === true && e && this.burst) this.burst(e, 12); set({ ppop: o }); };
+    const B = { pk0: prk === 0, pk1: prk === 1, pk2: prk === 2, pkSteps: S.map((t, i) => ({ t, n: i + 1, mark: i < prk ? '✓' : i + 1, on: i === prk, off: i !== prk, pick: () => goK(i) })),
+      pkHasPrev: prk > 0, pkPrev: () => goK(prk - 1), pkHasNext: prk < 2, pkNext: () => goK(prk + 1), pkNextL: prk < 2 ? 'Siguiente: ' + S[prk + 1] + ' →' : '',
+      popOn: !!pp, popE: pp ? pp.e : '', popT: pp ? pp.t : '', popW: pp ? pp.w : '', popBg: pp ? (pp.ok === true ? '#6BE3D7' : pp.ok === false ? '#FFD9D3' : '#B6E2FF') : '#FFFFFF', popBtnL: pp ? (pp.btn || 'Entendido') : '',
+      popHasL: !!(pp && pp.list), popL: pp && pp.list ? pp.list.map((t, i) => ({ t, n: i + 1 })) : [], popCurves: !!(pp && pp.curves), popAct: () => { const a = pp && pp.act; set({ ppop: null }); if (a) a(); } };
+    const tg = (arr, cur, fn) => arr.map((t, i) => ({ t, on: cur === i, off: cur !== i, pick: () => { sf('pop'); fn(i); } }));
+    const pi = st.p4p ?? 0, P = this.P4[pi], grid = st.p4g || P[4], key = st.p4k, step = key === 'seq' ? (st.p4s ?? -1) : -1, n = grid.filter(Boolean).length;
+    const COL = ['#6BE3D7', '#5691FF', '#B6E2FF'];
+    const rows = ['Agudo', 'Medio', 'Grave'].map((nm, r) => ({ n: nm, cells: Array.from({ length: 8 }, (_, c) => { const on = !!grid[r * 8 + c]; return { bg: on ? COL[r] : (c === step ? 'rgba(255,255,255,.22)' : 'rgba(255,255,255,.08)'), ol: c === step ? '2px solid #FF9C65' : '0 solid transparent', aria: nm + ', tiempo ' + (c + 1) + (on ? ', con nota' : ', vacía'), tog: () => { sf('pop'); const g2 = grid.slice(); g2[r * 8 + c] = g2[r * 8 + c] ? 0 : 1; set({ p4g: g2 }); } }; }) }));
+    const msg = n === 0 ? 'Toca casillas para poner notas.' : n > 12 ? 'Son muchas notas: una cortina simple se recuerda mejor. Quita algunas.' : n < 3 ? 'Muy pocas notas: todavía no se reconoce. Agrega 2 o 3.' : 'Se puede recordar: pocas notas y un final claro. ¿La tararearías?';
+    const mini = g => g.map((x, i) => ({ bg: x ? COL[Math.floor(i / 8)] : '#EEF2F8' }));
+    const va = st.p4v;
+    const vote = k => e => { set({ p4v: k }); openPop({ ok: k === 1, e: k === 1 ? '✓' : '✗', t: k === 1 ? 'La B se recuerda' : 'La A cansa', w: 'La A tiene 18 notas: suena llena, pero nadie la puede tararear. La B tiene 6 y un final claro. Las cortinas que se recuerdan son cortas y simples.', btn: 'Seguir', act: null }, e); };
+    const STEPS = { A: ['Abre en Canva el diseño de tu ensamble.', 'Pon la música al inicio y la línea entre el segundo 3 y el 5.', 'Toca los 3 puntitos (⋯) del audio › Dividir.', 'Toca ese pedazo › Fundir y sube el fundido de salida.', 'Déjalo listo al inicio de tu capítulo 1.'], B: ['Opción 1: busca en Mixkit o Pixabay un efecto corto de tu historia ("spoon", "bus") y descárgalo.', 'Opción 2: abre Gemini con tu cuenta personal.', 'Toca + › Más herramientas › Crear música.', 'Pide: "Cortina de 4 segundos para un podcast, [tu estilo], con [instrumento], que termine en una nota clara. Sin voz."', 'Si no te gusta, cambia una sola cosa del pedido. Si no te aparece "Crear música", usa la Ruta A.', 'Descárgala y súbela a Canva.'] };
+    return { ...B, p4Name: P[0], p4Pre: this.P4.map((x, i) => ({ e: x[5], t: x[0], d: x[6], on: pi === i, off: pi !== i, pick: () => { sf('pop'); set({ p4p: i, p4g: x[4].slice() }); } })),
+      p4Rows: rows, p4Msg: msg, p4Count: n + ' notas', p4OnSeq: key === 'seq', p4Play: () => this.p4Play(grid, pi, 'seq'), p4Clear: () => set({ p4g: Array(24).fill(0) }), p4PlayL: key === 'seq' ? '♪ Sonando…' : '▶ Escuchar',
+      p4MiniA: mini(this.P4BUSY), p4MiniB: mini(this.P4[0][4]), p4DescA: '18 notas', p4DescB: '6 notas', p4OnA: key === 'a', p4OnB: key === 'b',
+      p4PlayA: () => this.p4Play(this.P4BUSY, 2, 'a'), p4PlayB: () => this.p4Play(this.P4[0][4], 0, 'b'), p4Ask: va === undefined, p4VoteA: vote(0), p4VoteB: vote(1),
+      p4Val: 'Tú: ' + P[0].toLowerCase() + ' · Valentina: cálida, porque su historia pasa de madrugada, con tinto y frío. Tu cortina tiene que sonar a tu historia.',
+      p4RouteA: e => openPop({ e: 'A', t: 'Tu cortina en Canva', w: 'Sigue estos pasos con tu propia música:', list: STEPS.A, btn: 'Listo' }, e),
+      p4RouteB: e => openPop({ e: 'B', t: 'Tu cortina con Gemini', w: 'Revisa cuántos usos te quedan antes de empezar.', list: STEPS.B, btn: 'Listo' }, e) };
+  }
+  renderVals() {
+    const st = this.state;
+    const ttsOk = !!this.props.ttsPermitido;
+    const LV = (a, b, c) => [{ name: 'Nota', e: '📝', d: a }, { name: 'Reportaje', e: '🔎', d: b }, { name: 'Exclusiva', e: '⭐', d: c }];
+    const CC = { t: 'Abrir Canva', href: 'https://www.canva.com/' };
+    const SC = [
+      { id: 'cast', t: 'Casting de voces', short: 'Casting', e: '🎤', tool: 'WevoLabs · Canva', req: true, links: [{ t: 'Abrir WevoLabs', href: 'https://wevolabs.com/es/multi-tts' }, CC],
+        st: ['Lee cómo es cada voz y elige cuál es Doña Rosa.', 'Mira qué cambia: emoción, edad, ritmo, claridad y personalidad.', 'Genera la voz de todo tu capítulo 1 (desde Mi guion), paso a paso.'],
+        lv: LV('Tienes la voz de tu capítulo 1 completo y sabes explicar por qué elegiste esa voz.', 'Generas tu capítulo 1 con 2 estilos de voz y eliges uno.', 'Usas una voz para el narrador y otra para tu personaje.'),
+        block: 'Lee en voz alta la primera frase de tu guion. ¿Quién la diría así? ¿Joven o mayor, rápido o pausado?', manT: 'Voz con IA',
+        man: ['Copia todo tu capítulo 1 desde Mi guion, ya corregido.', 'A · WevoLabs (ruta principal): abre wevolabs.com/es/multi-tts, pega tu guion con nombres, elige una voz para cada uno y toca Generate conversation.', 'B · Canva (respaldo): en Apps busca "texto a voz", elige una voz sin corona y genera.', 'Descarga el audio y guárdalo en tu carpeta como voz-cap1.mp3.'] },
+      { id: 'mus', t: 'Música con intención', short: 'Música', e: '🎵', tool: 'Mixkit, Pixabay o Gemini', req: true,
+        links: [{ t: 'Mixkit', href: 'https://mixkit.co/free-stock-music/' }, { t: 'Pixabay', href: 'https://pixabay.com/music/' }, { t: 'Gemini', href: 'https://gemini.google.com/' }],
+        st: ['Arma un prompt musical: emoción, género, instrumentos, ritmo y propósito.', 'Compáralo con el prompt de Valentina, antes y después.', 'Con tu prompt, descarga una pista de una biblioteca o crea la tuya con Gemini.'],
+        lv: LV('Tienes una pista que cumple la intención de tu historia.', 'Comparas 2 pistas con tu prompt y explicas cuál cumple mejor.', 'Pruebas tu pista con 2 momentos de tu escaleta: ¿sirve para los dos?'),
+        block: 'Empieza por la emoción: ¿qué debe sentir quien escucha en el primer minuto?', manT: 'Bibliotecas o Gemini',
+        man: ['A · Abre Mixkit o Pixabay Music: son bibliotecas de música ya creada.', 'Busca con 2 o 3 palabras de tu prompt. En inglés funciona mejor: "acoustic warm", "lofi calm".', 'Escucha al menos 3 pistas antes de elegir.', 'Lee la licencia en la página de la pista y descarga el MP3 a tu carpeta.', 'Anota el nombre de la pista y su autor: los necesitas para los créditos.', 'B · O entra a gemini.google.com con tu cuenta personal: + › Más herramientas › Crear música. Pega tu prompt y descarga la pista.', 'Si no te aparece "Crear música", usa la Ruta A.'] },
+      { id: 'pausa', t: 'Descanso', short: 'Descanso', e: '☕', tool: 'Sin pantalla ni audífonos' },
+      { id: 'amb', t: 'Ambiente sonoro', short: 'Ambiente', e: '🌧️', tool: 'Mixkit o Pixabay', rec: true,
+        links: [{ t: 'Sonidos en Mixkit', href: 'https://mixkit.co/free-sound-effects/' }, { t: 'Sonidos en Pixabay', href: 'https://pixabay.com/sound-effects/' }],
+        st: ['Imagina el lugar de tu historia: ¿qué se oye ahí?', 'Busca esos sonidos en Mixkit o Pixabay.', 'Elige 2 o 3 sonidos que digan dónde ocurre tu historia.'],
+        lv: LV('Tienes 2 sonidos de ambiente para tu historia.', 'Eliges un sonido que cambie a mitad de la historia, como un bus que llega.', 'Diseñas un ambiente distinto para 2 momentos de tu escaleta.'),
+        block: 'Cierra los ojos e imagina el lugar de tu historia. ¿Qué es lo primero que escuchas?', manT: 'Bibliotecas de sonidos',
+        man: ['Abre la sección de efectos de sonido de Mixkit o Pixabay.', 'Busca el lugar en inglés: "street", "bus stop", "rain", "cafe", "park".', 'Elige sonidos sin voces que se entiendan.', 'Lee la licencia y descarga a tu carpeta.'] },
+      { id: 'ens', t: 'Primer ensamble', short: 'Ensamble', e: '🎚️', tool: 'Canva · tus audios', req: true, links: [CC],
+        st: ['Mezcla voz, música y ambiente en el simulador.', 'Encuentra cuándo un sonido ayuda y cuándo tapa la voz.', 'Arma tu primer ensamble en Canva y guarda el diseño.'],
+        lv: LV('Tu ensamble tiene voz, música y al menos un ambiente, y la voz se entiende.', 'La música entra después del gancho y baja cuando habla tu personaje.', 'Pruebas 2 mezclas distintas y te quedas con una.'),
+        block: 'Primero pon solo la voz. Luego la música, muy baja. El ambiente va al final.', manT: 'Ensamble en Canva',
+        man: ['Entra a canva.com con tu cuenta personal y crea un diseño de video con el nombre de tu historia.', 'Pon tu avatar de E2 como imagen de fondo de tu diseño de video.', 'En Subidos, sube tus archivos: voz, música y ambientes.', 'Arrastra cada audio a la línea de tiempo: la voz primero, la música y el ambiente debajo.', 'Corta lo que sobra: toca los 3 puntitos del audio y elige Dividir.', 'Ajusta el volumen en los 3 puntitos › Volumen: la voz alta, la música y el ambiente bajos.', 'Sin audífonos: selecciona la voz y genera subtítulos para ver qué se dice y cuándo.', 'No descargues todavía. Revisa que el diseño tenga el nombre de tu historia.'] },
+      { id: 'pro', req: true, t: 'Tu cortina musical', short: 'Cortina', e: '🎺', tool: 'Esta cápsula · Canva o Gemini', links: [CC, { t: 'Gemini', href: 'https://gemini.google.com/' }],
+        st: ['Compón una cortina de 4 segundos en el secuenciador.', 'Descubre qué la hace reconocible: corta, simple y siempre igual.', 'Crea tu cortina real con tu música o con Gemini.'],
+        lv: LV('Tienes tu cortina de 3 a 5 segundos y la pusiste al inicio de tu ensamble.', 'Haces una versión de 2 segundos para el cierre.', 'Tu cortina usa un sonido de tu historia: una cuchara, un bus, una puerta.'),
+        block: 'Toma los primeros 4 segundos de tu música y ponles fundido de salida. Ya es una cortina.' },
+    ];
+    const HOOK = { pro: 'Tu podcast, reconocible con los ojos cerrados.', cast: '¿Quién cuenta tu historia? Una voz cambia todo.', mus: 'Primero la intención, después la canción.', pausa: 'Tus oídos también necesitan descanso.', amb: 'El sonido dice dónde estás antes que las palabras.', ens: 'Voz, música y ambiente en una línea de tiempo.' };
+    const C = ['voz-cap1.mp3', 'Música y cortina', 'Tu ambiente', 'Diseño en Canva']; const CI = ['🎙️', '🎵', '🏙️', '🎨'];
+    const nChk = Object.values(st.chk).filter(Boolean).length, allChk = nChk === C.length;
+    const names = [['Inicio', '🎬'], ['Transmisión', '📡'], ['Valentina', '📓'], ['Escenas', '🎚️'], ['Comprueba', '🎙️'], ['Cierre', '✂️']];
+    const idx = names.map(([t, e], i) => { const done = i < st.s || (i === 5 && allChk); return { t, e, done, on: st.s === i && !done, todo: i > st.s && !done, go: () => this.go(i), goIdx: () => { this.setState({ idxOpen: false }); this.go(i); }, bg: st.s === i ? '#EAF2FF' : '#FFFFFF', dot: done ? '#6BE3D7' : st.s === i ? '#2F6FE0' : '#F2F6FC', mark: done ? '✓' : e }; });
+    const sc = SC[st.sc];
+    const scPills = SC.map((x, i) => ({ ...x, on: i === st.sc, done: i < st.sc, todo: i > st.sc, go: () => this.goSc(i) }));
+    const realN = SC.slice(0, st.sc + 1).filter(x => x.id !== 'pausa').length, realT = SC.filter(x => x.id !== 'pausa').length;
+    const P = st.playing, M = st.miss;
+
+    // Casting
+    const WV = [[40,70,90,60,80,100,70,50,90,60,80,40,70,90,50,30],[30,40,60,50,70,60,50,40,60,70,50,40,50,60,40,30],[60,60,60,60,60,60,60,60,60,60,60,60,60,60,60,60]];
+    const voices = ['a', 'b', 'c'].map((k, i) => ({ n: 'Voz ' + k.toUpperCase(), col: ['#6BE3D7', '#5691FF', '#B9F0EA'][i], wave: WV[i].map(h => h + '%'),
+      isPlaying: P === 'v' + k, notPlaying: P !== 'v' + k, play: () => this.playSet('v' + k, [{ k: 'voz-' + k }]), miss: !!M['voz-' + k],
+      d: ['Mujer joven. Habla rápido, apurada, casi sin aire, como si llegara tarde.', 'Mujer mayor. Habla pausado, con voz cálida y firme, como a un cliente de siempre.', 'Locutora neutra. Todo con el mismo tono, como en un comercial.'][i],
+      on: st.vPick === i, off: st.vPick !== i, pick: () => this.setState({ vPick: i }) }));
+    const vRows = [['Emoción', 'Apurada', 'Cálida', 'Neutra'], ['Edad aparente', 'Joven', 'Mayor', 'Sin edad clara'], ['Ritmo', 'Rápido', 'Pausado', 'Siempre igual'], ['Claridad', 'Media', 'Alta', 'Alta'], ['Personalidad', 'Nerviosa', 'Firme y cercana', 'De comercial']].map(([k, a, b, c]) => ({ k, a, b, c }));
+    const vFb = st.vPick === null ? '' : `Tú: Voz ${'ABC'[st.vPick]} · Valentina: Voz B. Ella buscaba a alguien que lleva 20 años en el mismo lugar: mayor, pausada y cálida. ` + (st.vPick === 1 ? 'Coinciden.' : 'Si puedes explicar por qué tu elección cuenta mejor la historia, también vale.');
+    const RT = [
+      { e: '🎙️', t: 'Mi propia voz', d: 'Grabas con el micrófono del computador o del celular. Es la opción más tuya.', m: 'Graba en un lugar silencioso, a un palmo del micrófono. Si te equivocas, repite solo esa frase.' },
+      { e: '🤖', t: 'Voz con IA', d: 'Escribes tu texto y una IA lo lee: WevoLabs o Canva.', m: 'Prueba primero con 1 frase. En tus créditos dirás que es una voz creada con IA.' },
+      { e: '📁', t: 'Voz preparada por tu docente', d: 'Si no puedes grabar ni usar texto a voz, tu docente te comparte una voz para tu primer ensamble.', m: 'Pídela a tu docente y guárdala en tu carpeta. Si estudias solo, usa el texto a voz de Canva.' },
+    ];
+    const VTL = [
+      { k: 'A', t: 'WevoLabs', logo: 'assets/logos/wevolabs.png', isW: true, isC: false, href: 'https://wevolabs.com/es/multi-tts', open: 'Abrir WevoLabs ↗',
+        lim: ['Cada toma admite hasta 5.000 caracteres: si tu guion es largo, genéralo por partes.', 'Tus tomas se guardan solo en ese navegador: descarga el MP3 antes de cerrar.', 'Algunas partes de la página están en inglés y, como es un sitio gratuito, puede cambiar o fallar. Ten Canva como plan B.'],
+        tips: ['No usa créditos ni cuenta, pero escribe tu guion final antes de generar para no perder tiempo.', 'Si cambias una línea, solo se vuelve a generar esa.', 'Elige voces fáciles de distinguir: narrador y personaje con voces distintas.'] },
+      { k: 'B', t: 'Canva', logo: 'assets/logos/canva.png', isW: false, isC: true, href: 'https://www.canva.com/', open: 'Abrir Canva ↗',
+        lim: ['Las voces están en Apps: busca "texto a voz". Algunas apps son de otras empresas y tienen sus propios límites.', 'Las voces con corona son Pro: no las uses.', 'Las voces gratis suenan menos naturales que WevoLabs.'],
+        tips: ['Es el respaldo: úsalo si WevoLabs no carga.', 'Genera frase por frase y quédate con la mejor.', 'Si la app pide pagar o registrarte en otro sitio, ciérrala y elige otra.'] },
+    ];
+    const HL = '3px solid #F47B20', NO = '0 solid transparent';
+    const it = (arr, hi) => arr.map((t, i) => ({ t, bg: i === hi ? '#E1EEFF' : 'transparent', ol: i === hi ? HL : NO }));
+    const ch = (arr, hi) => arr.map((t, i) => ({ t, bg: i === hi ? '#E1EEFF' : '#FFFFFF', ol: i === hi ? HL : NO }));
+    const GEM = ['Chat', 'Stream', 'Generate media', 'Build'], ELN = ['Home', 'Voices', 'Text to Speech', 'Voice Changer'], CVN = ['Plantillas', 'Elementos', 'Texto', 'Marca 👑', 'Subidos', 'Herramientas', 'Proyectos', 'Apps'];
+    const TXT = 'Son las 5:40. El agua todavía no hierve. Doña Rosa cuenta los vasos, uno por uno.';
+    const VSTEPS = [
+      [ { t: 'Abre el estudio de varias voces', d: 'Entra a wevolabs.com/es/multi-tts. No necesitas cuenta ni correo. Arriba debe estar marcado Multi-speaker.', url: 'wevolabs.com/es/multi-tts', lt: 'Arriba', left: it(['Single speaker', 'Multi-speaker', 'Voices'], 1), mt: 'Script' },
+        { t: 'Escribe tu guion con nombres', d: 'Pega todo tu capítulo 1 desde Mi guion. Empieza cada turno con el nombre y dos puntos: "Narrador:" y "Doña Rosa:". Lo que sigue es de esa voz hasta el siguiente nombre.', url: 'wevolabs.com/es/multi-tts', lt: 'Arriba', left: it(['Single speaker', 'Multi-speaker', 'Voices'], 1), mt: 'Script', box: 'Narrador: Son las 5:40. El agua todavía no hierve. Doña Rosa: Mijo, el tinto no espera.', boxHl: 1, note: '0 / 5.000 caracteres' },
+        { t: 'Elige una voz para cada nombre', d: 'En Cast (reparto) aparece cada nombre. Toca su voz y elige una en español, mejor de Colombia o México. Escuchar no cuesta nada.', url: 'wevolabs.com/es/multi-tts', lt: 'Cast', left: it(['Narrador', 'Doña Rosa'], 1), mt: 'Voz de Doña Rosa', chips: ch(['es-CO · Salomé', 'es-MX · Dalia', 'es-CO · Gonzalo'], 0) },
+        { t: 'Ajusta las pausas', d: 'En "Gap between lines" elige 0,3 s o 0,6 s entre turnos. Para una pausa dentro de una frase escribe [[p700]].', url: 'wevolabs.com/es/multi-tts', lt: 'Cast', left: it(['Narrador', 'Doña Rosa'], -1), mt: 'Gap between lines', chips: ch(['None', '0.3 s', '0.6 s', '1 s'], 2) },
+        { t: 'Toca Generate conversation', d: 'Se genera línea por línea con la voz de cada nombre y queda un solo audio.', url: 'wevolabs.com/es/multi-tts', lt: 'Cast', left: it(['Narrador', 'Doña Rosa'], -1), mt: 'Lines', box: 'Narrador: Son las 5:40. El agua todavía no hierve. Doña Rosa: Mijo, el tinto no espera.', btn: 'Generate conversation', btnHl: 1 },
+        { t: 'Escucha y descarga el MP3', d: 'Dale play. Si una línea suena rara, cámbiala y genera de nuevo: solo se rehace esa. Luego descarga el MP3 a tu carpeta.', url: 'wevolabs.com/es/multi-tts', lt: 'Cast', left: it(['Narrador', 'Doña Rosa'], -1), mt: 'Resultado', play: 1, dl: 1 } ],
+      [ { t: 'Abre tu diseño de video', d: 'Entra a canva.com con tu cuenta personal y abre el diseño de video de tu historia.', url: 'canva.com', lt: 'Barra lateral', left: it(CVN, -1), mt: 'Tu diseño', btn: 'Crear un diseño', btnHl: 1 },
+        { t: 'Toca Apps', d: 'En la barra de la izquierda, abajo, toca Apps.', url: 'canva.com', lt: 'Barra lateral', left: it(CVN, 7), mt: 'Apps', box: 'Buscar apps…' },
+        { t: 'Busca "texto a voz"', d: 'Escribe "texto a voz" y abre una app de voz. Si pide registrarte en otro sitio o pagar, ciérrala y elige otra.', url: 'canva.com', lt: 'Barra lateral', left: it(CVN, 7), mt: 'Apps', box: 'texto a voz', boxHl: 1, chips: ch(['App de voz 1', 'App de voz 2'], 0) },
+        { t: 'Pega tu texto y elige una voz', d: 'Pega todo tu capítulo 1 y elige una voz en español. Las que tienen corona 👑 son Pro: no las uses.', url: 'canva.com', lt: 'Barra lateral', left: it(CVN, 7), mt: 'App de voz', box: TXT, chips: ch(['Voz 1', 'Voz 2', 'Voz 3 👑'], 0) },
+        { t: 'Genera y agrégalo', d: 'Toca Generar, escucha y luego Agregar al diseño.', url: 'canva.com', lt: 'Barra lateral', left: it(CVN, 7), mt: 'App de voz', box: TXT, btn: 'Generar', btnHl: 1 },
+        { t: 'Revisa la línea de tiempo', d: 'El audio aparece debajo de tu diseño, en la línea de tiempo. Ahí lo usarás en el Primer ensamble.', url: 'canva.com', lt: 'Barra lateral', left: it(CVN, -1), mt: 'Línea de tiempo', play: 1 } ],
+    ];
+    const vS = st.vtool ?? 0, vT = VTL[vS], VSS = VSTEPS[vS], vsi = Math.min(st.vstep || 0, VSS.length - 1), vs = VSS[vsi];
+    const vVals = { vtools: VTL.map((v, i) => ({ ...v, on: vS === i, off: vS !== i, pick: () => { this.sfx('pop'); this.setState({ vtool: i, vstep: 0 }); } })), vLim: vT.lim, vTips: vT.tips, vTipsT: vS === 0 ? 'Para no perder tiempo' : 'Para no gastar créditos', vHref: vT.href, vOpen: vT.open,
+      vSteps: VSS.map((_, i) => ({ n: i + 1, on: i === vsi, done: i < vsi, todo: i > vsi, go: () => { this.sfx('pop'); this.setState({ vstep: i }); } })),
+      vStepN: vsi + 1, vStepTot: VSS.length, vStepT: vs.t, vStepD: vs.d, vNextL: vsi === VSS.length - 1 ? 'Volver al paso 1' : 'Siguiente paso →',
+      vPrev: () => this.setState({ vstep: Math.max(0, vsi - 1) }), vNext: () => { this.sfx(vsi === VSS.length - 2 ? 'ok' : 'pop'); this.setState({ vstep: vsi === VSS.length - 1 ? 0 : vsi + 1 }); },
+      vmUrl: vs.url, vmLeftT: vs.lt, vmLeft: vs.left, vmMainT: vs.mt, vmHasBox: !!vs.box, vmBox: vs.box || '', vmBoxOl: vs.boxHl ? HL : NO, vmHasChips: !!vs.chips, vmChips: vs.chips || [], vmHasBtn: !!vs.btn, vmBtn: vs.btn || '', vmBtnOl: vs.btnHl ? HL : NO, vmHasPlay: !!vs.play, vmDlOl: vs.dl ? HL : NO, vmHasNote: !!vs.note, vmNote: vs.note || '' };
+    const routes = RT.map((r, i) => ({ ...r, on: st.route === i, off: st.route !== i, pick: () => this.setState({ route: i }) }));
+
+    // Música
+    const MN = ['Música A', 'Música B', 'Música C'], MK = ['musica-a', 'musica-b', 'musica-c'];
+    const tracks = MN.map((n, i) => ({ n, on: st.mus === i, off: st.mus !== i, pick: () => { this.stopAll(); this.setState({ mus: i }); } }));
+    const FE = ['Tensión', 'Calidez', 'Alegría', 'Tristeza'], EXP = [0, 1, 2], WHY = ['cuerdas graves y un pulso que no se detiene', 'guitarra lenta y pocos instrumentos', 'ritmo rápido de fiesta'];
+    const fv = st.feel[st.mus];
+    const feels = FE.map((t, j) => ({ t, on: fv === j, off: fv !== j, pick: () => this.setState(s => ({ feel: { ...s.feel, [s.mus]: j } })) }));
+    const feelFb = fv === undefined ? '' : `Tú: ${FE[fv]}. Mucha gente la siente como ${FE[EXP[st.mus]].toLowerCase()} por su ${WHY[st.mus]}. ` + (fv === EXP[st.mus] ? 'Coinciden.' : 'No hay una sola respuesta: ¿qué escuchaste tú?');
+    const PP = [['Emoción', ['cálida', 'nostálgica', 'tensa', 'esperanzadora']], ['Género', ['acústica', 'lo-fi', 'ambiental', 'cumbia suave']], ['Instrumentos', ['guitarra', 'piano', 'tiple', 'percusión suave']], ['Ritmo', ['lento', 'medio', 'rápido']], ['Propósito', ['de fondo para la voz', 'para el gancho', 'para el cierre']]];
+    const pParts = PP.map(([k, o]) => ({ k, opts: o.map(t => ({ t, on: st.pb[k] === t, off: st.pb[k] !== t, pick: () => this.setState(s => ({ pb: { ...s.pb, [k]: s.pb[k] === t ? undefined : t } })) })) }));
+    const g = k => st.pb[k] || '[' + k.toLowerCase() + ']';
+    const pTxt = `Música ${g('Género')} ${g('Propósito')}, ${g('Emoción')}, con ${g('Instrumentos')} y ritmo ${g('Ritmo')}. Sin voz cantada. Que no tape la narración.`;
+
+    // Ambiente
+    const LY = [['calle', 'Calle temprano'], ['bus', 'Bus que frena'], ['olla', 'Agua que hierve']];
+    const layers = LY.map(([k, t]) => ({ t, on: !!st.amb[k], off: !st.amb[k], toggle: () => this.setState(s => ({ amb: { ...s.amb, [k]: !s.amb[k] } })) }));
+    const nL = LY.filter(([k]) => st.amb[k]).length;
+    const ambMsg = nL === 0 ? 'Sin ambiente suena a estudio: oyes la voz, pero no sabes dónde estás.' : nL === 1 ? 'Con una capa ya aparece el lugar. ¿Cuál dice más del paradero?' : nL === 2 ? 'Ya estás en el paradero. Fíjate si la voz se sigue entendiendo.' : 'Tres capas a la vez: ¿la voz compite con el ruido? A veces menos es más.';
+
+    // Mezcla
+    const mx = st.mix;
+    const MX = [['voz', '🎙️ Voz', '#6BE3D7'], ['mus', '🎵 Música', '#CFE3FF'], ['amb', '🌧️ Ambiente', '#5691FF']];
+    const mixer = MX.map(([k, n, col]) => ({ n, col, v: mx[k], h: Math.max(3, Math.round(mx[k] * 0.22)) + 'px', set: e => { const v = +e.target.value; this.setState(s => ({ mix: { ...s.mix, [k]: v } })); } }));
+    let mixMsg, mixOk = false;
+    if (mx.voz < 50) mixMsg = 'La voz está muy baja. Súbela: la voz siempre manda.';
+    else if (mx.mus >= mx.voz) mixMsg = 'La música tapa la voz. Bájala hasta que la sientas de fondo.';
+    else if (mx.amb >= mx.voz * 0.7) mixMsg = 'El ambiente compite con la voz. Debe sentirse, no escucharse.';
+    else if (mx.mus > 45) mixMsg = 'Casi. La música todavía distrae: prueba un poco más abajo.';
+    else { mixMsg = 'Buena mezcla: la voz se entiende y los sonidos acompañan.'; mixOk = true; }
+
+    // Escucha + quiz
+    const LS = ['Se entiende la voz de principio a fin.', 'La música acompaña la historia.', 'Los ambientes tienen sentido.', 'Ningún sonido se corta de golpe ni se pisa con otro.', 'Sé qué quiero mejorar.'];
+    const LM = ['Que la voz se entienda siempre.', 'Buscar una música que acompañe mejor.', 'Revisar si los ambientes ayudan a ubicar la escena.', 'Suavizar los cortes y que no se pisen los sonidos.', 'Definir qué quiero mejorar primero.'];
+    const sem = LS.map((t, i) => { const v = st.lst[i] || 0; return { t, g: v === 1 ? '#3DDC84' : '#24433C', y: v === 2 ? '#FFC93C' : '#24433C', l: ['Tocar', 'Bien', 'Mejorar'][v], lc: ['#9DC1FF', '#3DDC84', '#FFC93C'][v], aria: t + ': ' + ['sin revisar', 'bien', 'mejorar'][v], tap: () => { this.sfx(v === 0 ? 'ok' : 'pop'); this.setState(s => ({ lst: { ...s.lst, [i]: ((s.lst[i] || 0) % 2) + 1 } })); } }; });
+    const mejAll = LS.map((_, i) => i).filter(i => st.lst[i] === 2).map(i => LM[i]);
+    const nRated = LS.filter((_, i) => st.lst[i]).length;
+    const mej = mejAll.slice(0, 3).map((t, k) => ({ t, n: k + 1 }));
+    const semVals = { sem, mej, hasMej: mej.length > 0, noMej: mej.length === 0, mejMsg: nRated < LS.length ? 'Cuando marques en amarillo algo del semáforo, aparece aquí.' : '¡Todo en verde! Escucha otra vez con el parlante del computador: ¿sigue igual?' };
+    const Q = [
+      { q: 'En tu ensamble, la música suena más fuerte que la voz. ¿Qué haces?', ex: 4, o: [
+        { t: 'Subo todo al máximo.', fb: 'Si todo suena fuerte, nada se entiende.', ok: 0 },
+        { t: 'Bajo la música hasta que quede de fondo.', fb: 'Sí: la voz manda, la música acompaña.', ok: 1 },
+        { t: 'Quito la voz y dejo la música.', fb: 'Sin voz no hay historia.', ok: 0 }] },
+      { q: 'La voz que te gustó pide créditos o pagar. ¿Qué haces?', ex: 0, o: [
+        { t: 'Creo otra cuenta para tener más créditos.', fb: 'No se crean cuentas para saltarse límites.', ok: 0 },
+        { t: 'Uso una voz gratuita o cambio de herramienta.', fb: 'Exacto: siempre hay una ruta gratuita.', ok: 1 },
+        { t: 'Le pido a alguien una tarjeta para pagar.', fb: 'Nada de este bootcamp requiere pagar.', ok: 0 }] },
+      { q: 'Quieres el ambiente de la cafetería del colegio, pero dos personas están conversando. ¿Qué haces?', ex: 3, o: [
+        { t: 'Las grabo sin que sepan: suena más real.', fb: 'Grabar conversaciones privadas sin permiso no está permitido.', ok: 0 },
+        { t: 'Grabo cuando no haya voces que se entiendan, o uso un sonido de biblioteca.', fb: 'Sí: el lugar se siente y nadie queda expuesto.', ok: 1 },
+        { t: 'Grabo y después subo el volumen de sus voces.', fb: 'Eso expone a personas reales sin su permiso.', ok: 0 }] },
+    ];
+    const cq = Q[st.q];
+    const quiz = cq.o.map((o, i) => ({ ...o, bad: !o.ok, picked: st.qp[st.q] === i, notPicked: st.qp[st.q] !== i, pick: e => { this.sfx(o.ok ? 'ok' : 'no'); if (o.ok) this.burst(e); this.setState(s => ({ qp: { ...s.qp, [s.q]: i } })); } }));
+    const checks = C.map((t, i) => ({ t, i: CI[i], on: !!st.chk[i], off: !st.chk[i], toggle: e => { if (!st.chk[i] && nChk + 1 === C.length) { this.sfx('win'); this.burst(e, 26); this.toast('Episodio 4 completo', 'Tu primer ensamble te espera en el Episodio 5', '🎉'); } else this.sfx('pop'); this.setState(s => ({ chk: { ...s.chk, [i]: !s.chk[i] } })); } }));
+    const r = {}; for (let i = 0; i < 6; i++) r['s' + i] = st.s === i;
+    const complete = allChk && st.s === 5;
+    const links = sc.links || [];
+    return {
+      ...this.infraVals(), ...vVals, ...semVals, ...r, idx, status: complete ? 'Episodio 4 completo' : `Parada ${st.s + 1} de 6 · ${names[st.s][0]}`,
+      ...(() => { const ts = st.ts || 0; const goT = i => { this.sfx('go'); this.top(); this.setState({ ts: i }); };
+        const TS = ['Mensaje y misión', 'Antes de empezar'];
+        const VO = ['Sí, es claro', 'No, le falta intención'], VF = ['Parece claro, pero "bonito" le sirve a cualquier podcast. Por eso le salía música genérica.', 'Exacto: no decía qué tenía que sentir quien escucha.'];
+        const PO = ['Más alta', 'Igual', 'Más baja'], PF = ['Si suena más alta, tapa la voz y nadie entiende la historia.', 'Igual también compite: la voz se pierde.', 'Exacto: la música acompaña desde atrás.'];
+        const PQ = p => p === undefined ? 'Antes de mover nada: frente a la voz, la música debe sonar…' : 'Votaste: ' + PO[p].toLowerCase() + '. ' + PF[p] + ' Compruébalo en la mezcla.';
+        return { full: !!st.full, fullLabel: st.full ? '⤡ Salir' : '⤢ Pantalla completa', fullAria: st.full ? 'Salir de pantalla completa' : 'Ver en pantalla completa',
+        toggleFull: () => { try { const d = document, el = d.documentElement; if (d.fullscreenElement || d.webkitFullscreenElement) (d.exitFullscreen || d.webkitExitFullscreen).call(d); else (el.requestFullscreen || el.webkitRequestFullscreen).call(el); } catch (e) {} },
+        ts0: ts === 0, ts1: ts === 1, tNext: () => goT(1),
+        tSteps: TS.map((t, i) => ({ t, n: i + 1, mark: i < ts ? '✓' : i + 1, on: i === ts, off: i !== ts, pick: () => goT(i) })),
+        vAsk: st.vErr === undefined, vShown: st.vErr !== undefined, vFb: st.vErr !== undefined ? VF[st.vErr] : '', vOpts: VO.map((t, i) => ({ t, pick: () => { this.sfx('pop'); this.setState({ vErr: i }); } })),
+        pOpen: st.pr === undefined, pOpts: PO.map((t, i) => ({ t, pick: () => { this.sfx('pop'); this.setState({ pr: i }); } })), pQ: PQ(st.pr), }; })(),
+      line: `calc((100% - 84px) * ${complete ? 1 : st.s / 5})`, next: () => this.go(Math.min(5, st.s + 1)), goMusica: () => this.goSc(1),
+      scPills, scReq: !!sc.req, scRec: !!sc.rec, scIsPausa: sc.id === 'pausa', scNotPausa: sc.id !== 'pausa', scTot: realT, scN: realN,
+      scE: sc.e, scT: sc.t, scTool: sc.tool, scHook: HOOK[sc.id], links, hasLinks: links.length > 0,
+      hasSteps: !!sc.st, stP: sc.st ? sc.st[0] : '', stD: sc.st ? sc.st[1] : '', stA: sc.st ? sc.st[2] : '',
+      isCast: sc.id === 'cast', isMus: sc.id === 'mus', isPausa: sc.id === 'pausa', isPro: sc.id === 'pro', ...this.proVals(), isAmb: sc.id === 'amb', isEns: sc.id === 'ens',
+      voices, vPicked: st.vPick !== null, vRows, vFb, routes, routePicked: st.route !== null, routeMsg: st.route !== null ? RT[st.route].m : '',
+      tracks, musName: MN[st.mus], musPlaying: P === 'mus', musNotPlaying: P !== 'mus', musMiss: !!(M.narracion || M[MK[st.mus]]),
+      musPlay: () => this.playSet('mus', [{ k: 'narracion' }, { k: MK[st.mus], loop: true, v: 0.35 }]),
+      feels, feelDone: fv !== undefined, feelFb, feelInsight: Object.keys(st.feel).length >= 2, pParts, pTxt, lyriaDemo: this.props.demoMusicaIA !== false,
+      layers, ambMsg, ambPlaying: P === 'amb', ambNotPlaying: P !== 'amb', ambMiss: !!(M.narracion || M['amb-calle'] || M['amb-bus'] || M['amb-olla']),
+      ambPlay: () => this.playSet('amb', [{ k: 'narracion' }].concat(LY.filter(([k]) => st.amb[k]).map(([k]) => ({ k: 'amb-' + k, loop: true, v: 0.55 })))),
+      mixer, mixMsg, mixOk, mixBad: !mixOk, mixPlaying: P === 'mix', mixNotPlaying: P !== 'mix', mixMiss: !!(M.narracion || M['musica-b'] || M['amb-calle']),
+      mixPlay: () => this.playSet('mix', [{ k: 'narracion', v: mx.voz / 100 }, { k: 'musica-b', loop: true, v: mx.mus / 100 }, { k: 'amb-calle', loop: true, v: mx.amb / 100 }]),
+      hasLevels: !!sc.lv, goalD: sc.lv ? sc.lv[0].d : '', extras: sc.lv ? sc.lv.slice(1) : [], extra: st.extra, extraArrow: st.extra ? '▴' : '▾', toggleExtra: () => this.setState(s => ({ extra: !s.extra })),
+      lvlIsDone: !!st.lvDone[sc.id], lvlNotDone: !st.lvDone[sc.id], lvlToggle: e => { if (!st.lvDone[sc.id]) { this.sfx('ok'); this.burst(e); this.toast('Logro desbloqueado', sc.t, '🏅'); } this.setState(s => ({ lvDone: { ...s.lvDone, [sc.id]: !s.lvDone[sc.id] } })); },
+      hasBlock: !!sc.block, blockTxt: sc.block || '', block: st.block, blockArrow: st.block ? '▴' : '▾', toggleBlock: () => this.setState(s => ({ block: !s.block })),
+      hasManual: !!sc.man, manualTitle: sc.manT || '', manualItems: sc.man || [], manual: st.manual, manualArrow: st.manual ? '▴' : '▾', toggleManual: () => this.setState(s => ({ manual: !s.manual })),
+      scPrev: () => st.sc === 0 ? this.go(2) : this.goSc(st.sc - 1),
+      scNext: () => st.sc === SC.length - 1 ? this.go(4) : this.goSc(st.sc + 1),
+      scNextLabel: st.sc === SC.length - 1 ? 'Comprobar lo aprendido →' : `Siguiente: ${SC[st.sc + 1].t} →`,
+      qBars: Q.map((_, i) => ({ on: i <= st.q, off: i > st.q })), qN: st.q + 1, qQ: cq.q,
+      quiz, goEx: () => this.goSc(cq.ex), exName: SC[cq.ex].t,
+      qNext: () => st.q < 2 ? this.setState(s => ({ q: s.q + 1 })) : this.go(5), qNextLabel: st.q < 2 ? 'Siguiente pregunta →' : 'Ir al cierre →',
+      checks, nChk, nTot: C.length, allChk,
+      oculta: st.oculta, toggleOculta: () => this.setState(s => ({ oculta: !s.oculta })),
+    };
+  }
+}
+</script>
+</body>
+</html>
